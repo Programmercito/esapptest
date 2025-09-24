@@ -1,32 +1,57 @@
 import { HistoryApi } from '@/history/service/history-api';
+import { BinanceWebsocketApiTs } from '@/libs/common/services/binance-websocket-api.ts';
 import { TransactionModel } from '@/libs/models/transaction-model';
 import { UserModel } from '@/libs/models/users-model';
 import { TransactionApi } from '@/transaction/service/transaction-api';
 import { CurrencyPipe } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { MessageService } from 'primeng/api';
+import { Subscription } from 'rxjs';
+import { TableModule } from "primeng/table";
+import { BaseIcon } from "primeng/icons/baseicon";
 
 @Component({
   selector: 'app-dashboard',
-  imports: [CurrencyPipe],
+  imports: [CurrencyPipe, TableModule, BaseIcon],
   templateUrl: './dashboard.html',
   styleUrl: './dashboard.scss',
   standalone: true,
   providers: [MessageService]
 })
-export class Dashboard implements OnInit {
+export class Dashboard implements OnInit, OnDestroy {
   lista: TransactionModel[] = [];
   users: UserModel[] = [];
   totalTransactions: number = 0;
   totalMonto: number = 0;
   cuentaConMasTransacciones!: UserModel;
+
+  prices: any[] = [];
+  private sub!: Subscription;
+
+
   constructor(private historyApi: HistoryApi,
     private transactionApi: TransactionApi,
-    private messageservice: MessageService
+    private messageservice: MessageService,
+    private binanceservice: BinanceWebsocketApiTs
   ) {
 
   }
+  ngOnDestroy(): void {
+    this.sub.unsubscribe();
+    this.binanceservice.disconnect();
+  }
   ngOnInit(): void {
+
+    this.binanceservice.connect();
+    this.sub = this.binanceservice.getPrices().subscribe(data => {
+      this.prices = [
+        ...this.prices.filter(p => p.s !== data.s),
+        data
+      ];
+      //ordeno prices por S
+      this.prices.sort((a, b) => a.s.localeCompare(b.s));
+    });
+
     this.historyApi.getTransactions().subscribe({
       next: (data) => {
         this.lista = data;

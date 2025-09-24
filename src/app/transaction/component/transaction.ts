@@ -79,11 +79,11 @@ export class Transaction {
     this.transactionapi.modifyUser(this.destination).subscribe({});;
   }
   validar(monto: number, origen: UserModel, destino: UserModel) {
-    if (!origen.balance) {
+    if (!origen.id) {
       this.messageservice.add({ severity: 'error', summary: 'Error', detail: 'Seleccione una cuenta de origen' });
       return false;
     }
-    if (!destino.balance) {
+    if (!destino.id) {
       this.messageservice.add({ severity: 'error', summary: 'Error', detail: 'Seleccione una cuenta destino' });
       return false;
     }
