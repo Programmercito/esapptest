@@ -27,8 +27,8 @@ export class AppMenu {
             {
                 label: 'Transactions',
                 items: [
-                    { label: 'Transaction', icon: 'pi pi-fw pi-circle', routerLink: ['/transaction'] },
-                    { label: 'History', icon: 'pi pi-fw pi-mail', routerLink: ['/history'] }
+                    { label: 'Transaction', icon: 'pi pi-fw pi-dollar', routerLink: ['/transaction'] },
+                    { label: 'History', icon: 'pi pi-fw pi-history', routerLink: ['/history'] }
                 ]
             }
         ];
