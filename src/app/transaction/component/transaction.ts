@@ -8,11 +8,12 @@ import { UserModel } from '@/libs/models/users-model';
 import { MessageService } from 'primeng/api';
 import { ToastModule } from 'primeng/toast';
 import { SelectModule } from 'primeng/select';
+import { Button, ButtonModule } from "primeng/button";
 
 
 @Component({
   selector: 'app-transaction',
-  imports: [FluidModule, FormsModule, InputTextModule, ToastModule, SelectModule],
+  imports: [FluidModule, FormsModule, InputTextModule, ToastModule, SelectModule, ButtonModule],
   templateUrl: './transaction.html',
   standalone: true,
   providers: [MessageService],
