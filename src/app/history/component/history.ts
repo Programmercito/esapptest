@@ -9,6 +9,7 @@ import { FormsModule } from '@angular/forms';
 import { forkJoin } from 'rxjs';
 import { SelectModule } from 'primeng/select';
 import { TransactionApi } from '@/transaction/service/transaction-api';
+import { FluidModule } from "primeng/fluid";
 
 interface TransactionView extends TransactionModel {
   origenName: string;
@@ -17,18 +18,23 @@ interface TransactionView extends TransactionModel {
 
 @Component({
   selector: 'app-history',
-  imports: [TableModule, CommonModule, InputTextModule, SelectModule, FormsModule],
+  imports: [TableModule, CommonModule, InputTextModule, SelectModule, FormsModule, FluidModule],
   templateUrl: './history.html',
   styleUrl: './history.scss',
   standalone: true
 })
 export class History implements OnInit {
+  origin: UserModel;
+  destination: UserModel;
   transactions: TransactionView[] = [];
   users: UserModel[] = [];
 
   constructor(private historyApi: HistoryApi,
     private transactionApi: TransactionApi
-  ) { }
+  ) {
+    this.origin = {} as UserModel;
+    this.destination = {} as UserModel;
+  }
 
   ngOnInit(): void {
     forkJoin({
