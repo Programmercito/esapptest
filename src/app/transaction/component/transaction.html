@@ -1,4 +1,6 @@
 <p-toast></p-toast>
+<p-confirmdialog></p-confirmdialog>
+
 <p-fluid>
     <div class="flex flex-col md:flex-row gap-8">
         <div class="md:w-1/2">
@@ -31,14 +33,19 @@
                     </p-select>
                 </div>
                 <div class="flex flex-col gap-2">
-                    <label for="email1">Monto a transferir</label>
-                    <input pInputText id="email1" type="text" />
+                    <label for="monto">Monto a transferir</label>
+                    <p-inputnumber [(ngModel)]="monto" inputId="minmaxfraction"
+                        mode="decimal" [minFractionDigits]="2"
+                        [maxFractionDigits]="2" />
+
                 </div>
                 @if (origin.name!=null){
                 <div class="font-semibold text-xl">Cliente Origen</div>
                 <div class="flex flex-col gap-2">
-                    <label for="email1">Nombre</label>
+                    <label for="name">Nombre</label>
                     {{origin.name.first}} {{origin.name.last}}
+                    <label for="balance">Saldo</label>
+                    {{origin.balance | currency:'':''}}
                     <img [src]="origin.picture.large" style="width: 180px"
                         class="rounded-xl" />
                 </div>
@@ -76,15 +83,16 @@
                     </p-select>
                 </div>
                 <div class="flex flex-col gap-2">
-                    <label for="email1">Accion</label>
-
-                    <p-button>Transferir</p-button>
+                    <label for="button">Accion</label>
+                    <p-button (onClick)="transferir()">Transferir</p-button>
                 </div>
                 @if (destination.name!=null){
                 <div class="font-semibold text-xl">Cliente Origen</div>
                 <div class="flex flex-col gap-2">
-                    <label for="email1">Nombre</label>
+                    <label for="img">Nombre</label>
                     {{destination.name.first}} {{destination.name.last}}
+                    <label for="balance">Saldo</label>
+                    {{destination.balance | currency:'':''}}
                     <img [src]="destination.picture.large" style="width: 180px"
                         class="rounded-xl" />
                 </div>

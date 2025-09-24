@@ -8,7 +8,7 @@ export interface UserModel {
   registered: Registered;
   phone: string;
   cell: string;
-  id: Id;
+  id: string;
   picture: Picture;
   nat: string;
   balance: number;
@@ -63,11 +63,6 @@ export interface Dob {
 export interface Registered {
   date: string;
   age: number;
-}
-
-export interface Id {
-  name: string;
-  value: string | null;
 }
 
 export interface Picture {
