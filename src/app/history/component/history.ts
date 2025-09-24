@@ -25,9 +25,11 @@ interface TransactionView extends TransactionModel {
   standalone: true
 })
 export class History implements OnInit {
+
   origin: UserModel;
   destination: UserModel;
   transactions: TransactionView[] = [];
+  originalTransactions: TransactionView[] = [];
   users: UserModel[] = [];
   montofilter!: number;
 
@@ -38,23 +40,50 @@ export class History implements OnInit {
     this.destination = {} as UserModel;
   }
   onEnter(valor: number) {
-    this.filter(this.origin.id, this.destination.id, this.montofilter);
+    this.filter(this.origin, this.destination, this.montofilter);
   }
   onInputChange($event: InputNumberInputEvent) {
     if ($event.value === null || $event.value === '') {
-      this.filter(this.origin.id, this.destination.id, this.montofilter);
+      this.filter(this.origin, this.destination, this.montofilter);
     }
 
   }
   destinoChange($event: SelectChangeEvent) {
-    this.filter(this.origin.id, this.destination.id, this.montofilter);
+    this.filter(this.origin, this.destination, this.montofilter);
   }
   origenChange($event: SelectChangeEvent) {
-    this.filter(this.origin.id, this.destination.id, this.montofilter);
+    this.filter(this.origin, this.destination, this.montofilter);
   }
+  onCleardes() {
+    console.log("cleardes1");
+    this.filter(this.origin, this.destination, this.montofilter);
 
-  filter(origen: string, destino: string, monto: number | string) {
+  }
+  onClear() {
+    console.log("clear1");
+    this.filter(this.origin, this.destination, this.montofilter);
 
+  }
+  filter(origen: UserModel, destino: UserModel, monto: number | string | null) {
+    let filteredTransactions = [...this.originalTransactions];
+
+    if (origen && origen.id && origen.id !== '0') {
+      filteredTransactions = filteredTransactions.filter(t => t.origen === origen.id);
+    }
+
+    if (destino && destino.id && destino.id !== '0') {
+      filteredTransactions = filteredTransactions.filter(t => t.destino === destino.id);
+    }
+
+    if (monto) {
+      const montoAsNumber = typeof monto === 'string' ? parseFloat(monto) : monto;
+      if (!isNaN(montoAsNumber)) {
+        filteredTransactions = filteredTransactions.filter(t => t.monto === montoAsNumber);
+      }
+    }
+
+
+    this.transactions = filteredTransactions;
   }
 
   ngOnInit(): void {
@@ -63,11 +92,12 @@ export class History implements OnInit {
       users: this.transactionApi.getUsers()
     }).subscribe(({ transactions, users }) => {
       this.users = users;
-      this.transactions = transactions.map(t => ({
+      this.originalTransactions = transactions.map(t => ({
         ...t,
         origenName: this.getUserName(t.origen),
         destinoName: this.getUserName(t.destino)
       }));
+      this.transactions = [...this.originalTransactions];
     });
   }
 

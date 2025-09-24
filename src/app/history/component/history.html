@@ -9,7 +9,7 @@
                         [(ngModel)]="origin" optionLabel="name"
                         [filter]="true" filterBy="name.first" [showClear]="true"
                         placeholder="Select a Account" class="w-full md:w-56"
-                        (onChange)="origenChange($event)">
+                        (onChange)="origenChange($event)" (onClear)="onClear()">
                         <ng-template #selectedItem let-selectedOption>
                             <div class="flex items-center gap-2">
                                 <img
@@ -42,7 +42,7 @@
                         [(ngModel)]="destination" optionLabel="name"
                         [filter]="true" filterBy="name.first" [showClear]="true"
                         placeholder="Select a Account" class="w-full md:w-56"
-                        (onChange)="destinoChange($event)">
+                        (onChange)="destinoChange($event)" (onClear)="onCleardes()">
                         <ng-template #selectedItem let-selectedOption>
                             <div class="flex items-center gap-2">
                                 <img
