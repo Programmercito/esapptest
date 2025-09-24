@@ -7,10 +7,10 @@ import { CommonModule } from '@angular/common';
 import { InputTextModule } from 'primeng/inputtext';
 import { FormsModule } from '@angular/forms';
 import { forkJoin } from 'rxjs';
-import { SelectModule } from 'primeng/select';
+import { SelectChangeEvent, SelectModule } from 'primeng/select';
 import { TransactionApi } from '@/transaction/service/transaction-api';
 import { FluidModule } from "primeng/fluid";
-import { InputNumberModule } from "primeng/inputnumber";
+import { InputNumberInputEvent, InputNumberModule } from "primeng/inputnumber";
 
 interface TransactionView extends TransactionModel {
   origenName: string;
@@ -29,12 +29,32 @@ export class History implements OnInit {
   destination: UserModel;
   transactions: TransactionView[] = [];
   users: UserModel[] = [];
+  montofilter!: number;
 
   constructor(private historyApi: HistoryApi,
     private transactionApi: TransactionApi
   ) {
     this.origin = {} as UserModel;
     this.destination = {} as UserModel;
+  }
+  onEnter(valor: number) {
+    this.filter(this.origin.id, this.destination.id, this.montofilter);
+  }
+  onInputChange($event: InputNumberInputEvent) {
+    if ($event.value === null || $event.value === '') {
+      this.filter(this.origin.id, this.destination.id, this.montofilter);
+    }
+
+  }
+  destinoChange($event: SelectChangeEvent) {
+    this.filter(this.origin.id, this.destination.id, this.montofilter);
+  }
+  origenChange($event: SelectChangeEvent) {
+    this.filter(this.origin.id, this.destination.id, this.montofilter);
+  }
+
+  filter(origen: string, destino: string, monto: number | string) {
+
   }
 
   ngOnInit(): void {
