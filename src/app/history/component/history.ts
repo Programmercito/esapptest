@@ -8,6 +8,7 @@ import { InputTextModule } from 'primeng/inputtext';
 import { FormsModule } from '@angular/forms';
 import { forkJoin } from 'rxjs';
 import { SelectModule } from 'primeng/select';
+import { TransactionApi } from '@/transaction/service/transaction-api';
 
 interface TransactionView extends TransactionModel {
   origenName: string;
@@ -25,12 +26,14 @@ export class History implements OnInit {
   transactions: TransactionView[] = [];
   users: UserModel[] = [];
 
-  constructor(private historyApi: HistoryApi) { }
+  constructor(private historyApi: HistoryApi,
+    private transactionApi: TransactionApi
+  ) { }
 
   ngOnInit(): void {
     forkJoin({
       transactions: this.historyApi.getTransactions(),
-      users: this.historyApi.getUsers()
+      users: this.transactionApi.getUsers()
     }).subscribe(({ transactions, users }) => {
       this.users = users;
       this.transactions = transactions.map(t => ({

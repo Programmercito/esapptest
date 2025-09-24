@@ -18,8 +18,4 @@ export class HistoryApi {
   getTransactions(): Observable<TransactionModel[]> {
     return this.http.get<TransactionModel[]>(`${this.apicommon.getUrlApi()}/transactions`);
   }
-
-  getUsers(): Observable<UserModel[]> {
-    return this.http.get<UserModel[]>(`${this.apicommon.getUrlApi()}/users`);
-  }
 }

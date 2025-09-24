@@ -23,8 +23,6 @@ export class TransactionApi {
   insertTransaction(transaction: TransactionModel): Observable<TransactionModel> {
     return this.http.post<TransactionModel>(`${this.apicommon.getUrlApi()}/transactions`, transaction);
   }
-  getTransactions(): Observable<TransactionModel[]> {
-    return this.http.get<TransactionModel[]>(`${this.apicommon.getUrlApi()}/transactions`);
-  }
+
 
 }

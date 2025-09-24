@@ -1,34 +1,15 @@
 <div class="card">
-    <p-table #dt [value]="transactions" [paginator]="true" [rows]="10" [globalFilterFields]="['origenName', 'destinoName', 'monto']">
+    <p-table #dt [value]="transactions" [paginator]="true" [rows]="10">
         <ng-template pTemplate="caption">
-            <div class="flex">
-                <span class="p-input-icon-left ml-auto">
-                    <i class="pi pi-search"></i>
-                    <input pInputText type="text" (input)="dt.filterGlobal($event.target.value, 'contains')" placeholder="Search keyword" />
-                </span>
-            </div>
         </ng-template>
         <ng-template pTemplate="header">
             <tr>
-                <th pSortableColumn="origenName">Origen <p-sortIcon field="origenName"></p-sortIcon></th>
-                <th pSortableColumn="destinoName">Destino <p-sortIcon field="destinoName"></p-sortIcon></th>
-                <th pSortableColumn="monto">Monto <p-sortIcon field="monto"></p-sortIcon></th>
-                <th pSortableColumn="date">Fecha <p-sortIcon field="date"></p-sortIcon></th>
+                <th>Origen></th>
+                <th>Destino </th>
+                <th>Monto </th>
+                <th>Fecha </th>
             </tr>
-            <tr>
-                <th>
-                    <p-columnFilter type="text" field="origenName"></p-columnFilter>
-                </th>
-                <th>
-                    <p-columnFilter type="text" field="destinoName"></p-columnFilter>
-                </th>
-                <th>
-                    <p-columnFilter type="numeric" field="monto"></p-columnFilter>
-                </th>
-                <th>
-                    <p-columnFilter type="date" field="date"></p-columnFilter>
-                </th>
-            </tr>
+
         </ng-template>
         <ng-template pTemplate="body" let-transaction>
             <tr>
