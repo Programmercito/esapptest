@@ -10,6 +10,7 @@ import { forkJoin } from 'rxjs';
 import { SelectModule } from 'primeng/select';
 import { TransactionApi } from '@/transaction/service/transaction-api';
 import { FluidModule } from "primeng/fluid";
+import { InputNumberModule } from "primeng/inputnumber";
 
 interface TransactionView extends TransactionModel {
   origenName: string;
@@ -18,7 +19,7 @@ interface TransactionView extends TransactionModel {
 
 @Component({
   selector: 'app-history',
-  imports: [TableModule, CommonModule, InputTextModule, SelectModule, FormsModule, FluidModule],
+  imports: [TableModule, CommonModule, InputTextModule, SelectModule, FormsModule, FluidModule, InputNumberModule],
   templateUrl: './history.html',
   styleUrl: './history.scss',
   standalone: true
