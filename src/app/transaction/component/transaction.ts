@@ -73,7 +73,6 @@ export class Transaction {
           this.transactionProcess();
           this.messageservice.add({ severity: 'success', summary: this.translate.instant('common.success'), detail: this.translate.instant('transaction.transaction_successful') });
           this.infotransaction = true;
-          this.ngOnInit();
         }
       });
 
@@ -100,8 +99,16 @@ export class Transaction {
     });
     this.origin.balance -= this.monto;
     this.destination.balance += this.monto;
-    this.transactionapi.modifyUser(this.origin).subscribe({});;
-    this.transactionapi.modifyUser(this.destination).subscribe({});;
+    this.transactionapi.modifyUser(this.origin).subscribe({
+      next: (res: UserModel) => {
+        this.transactionapi.modifyUser(this.destination).subscribe({
+          next: (res: UserModel) => {
+            this.ngOnInit();
+          }
+        });
+      }
+    });;
+
   }
   validar(monto: number, origen: UserModel, destino: UserModel) {
     if (!origen.id) {
