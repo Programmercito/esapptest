@@ -33,6 +33,8 @@ export class History implements OnInit {
   originalTransactions: TransactionView[] = [];
   users: UserModel[] = [];
   montofilter!: number;
+  total!: number;
+
 
   constructor(private historyApi: HistoryApi,
     private transactionApi: TransactionApi
@@ -85,6 +87,8 @@ export class History implements OnInit {
 
 
     this.transactions = filteredTransactions;
+    this.total = this.transactions.reduce((total, transaction) => total + transaction.monto, 0);
+
   }
 
   ngOnInit(): void {

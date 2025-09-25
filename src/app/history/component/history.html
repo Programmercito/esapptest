@@ -2,13 +2,16 @@
     <div class="flex flex-col md:flex-row gap-8">
         <div class="md:w-1/3">
             <div class="card flex flex-col gap-4">
-                <div class="font-semibold text-xl">{{ 'common.origin' | translate }}</div>
+                <div class="font-semibold text-xl">{{ 'common.origin' |
+                    translate }}</div>
                 <div class="flex flex-col gap-2">
-                    <label for="name1">{{ 'transaction.origin_client' | translate }}</label>
+                    <label for="name1">{{ 'transaction.origin_client' |
+                        translate }}</label>
                     <p-select [options]="this.users"
                         [(ngModel)]="origin" optionLabel="name"
                         [filter]="true" filterBy="name.first" [showClear]="true"
-                        [placeholder]="'common.select_account' | translate" class="w-full md:w-56"
+                        [placeholder]="'common.select_account' | translate"
+                        class="w-full md:w-56"
                         (onChange)="origenChange($event)" (onClear)="onClear()">
                         <ng-template #selectedItem let-selectedOption>
                             <div class="flex items-center gap-2">
@@ -35,13 +38,16 @@
         </div>
         <div class="md:w-1/3">
             <div class="card flex flex-col gap-4">
-                <div class="font-semibold text-xl">{{ 'common.destination' | translate }}</div>
+                <div class="font-semibold text-xl">{{ 'common.destination' |
+                    translate }}</div>
                 <div class="flex flex-col gap-2">
-                    <label for="name1">{{ 'transaction.destination_client' | translate }}</label>
+                    <label for="name1">{{ 'transaction.destination_client' |
+                        translate }}</label>
                     <p-select [options]="this.users"
                         [(ngModel)]="destination" optionLabel="name"
                         [filter]="true" filterBy="name.first" [showClear]="true"
-                        [placeholder]="'common.select_account' | translate" class="w-full md:w-56"
+                        [placeholder]="'common.select_account' | translate"
+                        class="w-full md:w-56"
                         (onChange)="destinoChange($event)"
                         (onClear)="onCleardes()">
                         <ng-template #selectedItem let-selectedOption>
@@ -68,9 +74,11 @@
         </div>
         <div class="md:w-1/3">
             <div class="card flex flex-col gap-4">
-                <div class="font-semibold text-xl">{{ 'common.amount' | translate }}</div>
+                <div class="font-semibold text-xl">{{ 'common.amount' |
+                    translate }}</div>
                 <div class="flex flex-col gap-2">
-                    <label for="amount">{{ 'common.amount' | translate }}</label>
+                    <label for="amount">{{ 'common.amount' | translate
+                        }}</label>
                     <p-inputnumber
                         mode="decimal" [minFractionDigits]="2"
                         [maxFractionDigits]="2"
@@ -93,13 +101,17 @@
         </ng-template>
         <ng-template pTemplate="header">
             <tr>
-                <th pSortableColumn="origenName">{{ 'common.origin' | translate }} <p-sortIcon
+                <th pSortableColumn="origenName">{{ 'common.origin' | translate
+                    }} <p-sortIcon
                         field="origenName" /></th>
-                <th pSortableColumn="destinoName">{{ 'common.destination' | translate }} <p-sortIcon
+                <th pSortableColumn="destinoName">{{ 'common.destination' |
+                    translate }} <p-sortIcon
                         field="destinoName" /></th>
-                <th pSortableColumn="monto">{{ 'common.amount' | translate }} <p-sortIcon
+                <th pSortableColumn="monto">{{ 'common.amount' | translate }}
+                    <p-sortIcon
                         field="monto" /></th>
-                <th pSortableColumn="date">{{ 'history.date' | translate }} <p-sortIcon
+                <th pSortableColumn="date">{{ 'history.date' | translate }}
+                    <p-sortIcon
                         field="date" /></th>
             </tr>
         </ng-template>
@@ -113,3 +125,16 @@
         </ng-template>
     </p-table>
 </div>
+<p-fluid>
+    <div class="flex flex-col md:flex-row gap-8">
+        <div class="card flex flex-col gap-4">
+            <div class="font-semibold text-xl">{{ 'dashboard.total_money_moved'
+                | translate
+                }}</div>
+            <div class="flex flex-col gap-2">
+                <label for="amount">{{ 'common.amount' | translate }}</label>
+                {{this.total | currency:'':''}}
+            </div>
+        </div>
+    </div>
+</p-fluid>
