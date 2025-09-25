@@ -117,34 +117,33 @@
 <p-dialog modal="true" [visible]="infotransaction" closable="true">
     <ng-template #header>
         <div class="inline-flex items-center justify-center gap-2">
-            <span class="font-bold whitespace-nowrap text-xl">Comprobante de
-                transacción</span>
+            <span class="font-bold whitespace-nowrap text-xl">{{ 'transaction.receipt.title' | translate }}</span>
         </div>
     </ng-template>
     @if(this.origin && this.origin.id && this.destination &&
     this.destination.id){
     <div class="flex items-center gap-4 mb-4">
-        <label for="username" class="font-semibold w-24">Origen</label>
+        <label for="username" class="font-semibold w-24">{{ 'common.origin' | translate }}</label>
         {{origin.name.first}} {{origin.name.last}}
     </div>
     <div class="flex items-center gap-4 mb-4">
-        <label for="username" class="font-semibold w-24">Destino</label>
+        <label for="username" class="font-semibold w-24">{{ 'common.destination' | translate }}</label>
         {{destination.name.first}} {{destination.name.last}}
     </div>
     }
     @if(this.transaction){
     <div class="flex items-center gap-4 mb-4">
-        <label for="username" class="font-semibold w-24">Monto</label>
+        <label for="username" class="font-semibold w-24">{{ 'common.amount' | translate }}</label>
         {{ transaction.monto | currency:'':''}}
     </div>
     <div class="flex items-center gap-4 mb-4">
-        <label for="username" class="font-semibold w-24">Fecha</label>
+        <label for="username" class="font-semibold w-24">{{ 'history.date' | translate }}</label>
         {{ transaction.date | date:'dd/MM/yyyy HH:mm:ss' }}
     </div>
     }
     <div class="flex items-center gap-4 mb-4">
-        <label for="username" class="font-semibold w-24">Estado</label>
-        Realizado
+        <label for="username" class="font-semibold w-24">{{ 'transaction.receipt.status' | translate }}</label>
+        {{ 'transaction.receipt.status_done' | translate }}
     </div>
     <ng-template pTemplate="footer">
         <div class="flex justify-end">

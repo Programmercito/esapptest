@@ -52,7 +52,7 @@
         "thumbnail": "https://randomuser.me/api/portraits/thumb/men/2.jpg"
       },
       "nat": "TR",
-      "balance": 30
+      "balance": 24
     },
     {
       "gender": "male",
@@ -106,7 +106,7 @@
         "thumbnail": "https://randomuser.me/api/portraits/thumb/men/88.jpg"
       },
       "nat": "RS",
-      "balance": 3899
+      "balance": 3903
     },
     {
       "gender": "female",
@@ -694,6 +694,27 @@
       "destino": "543245345342",
       "date": "2025-09-25T15:39:05.776Z",
       "monto": 1
+    },
+    {
+      "id": "94df98ec-2ee5-4def-9743-fbda6844a8a1",
+      "origen": "423435656534",
+      "destino": "261371439",
+      "date": "2025-09-25T15:46:00.299Z",
+      "monto": 2
+    },
+    {
+      "id": "dd829c90-b11c-42de-a2bb-62a5d67ef336",
+      "origen": "423435656534",
+      "destino": "261371439",
+      "date": "2025-09-25T15:47:03.144Z",
+      "monto": 2
+    },
+    {
+      "id": "cb59b5f7-bfb1-45b3-ada3-c871c0ba6f66",
+      "origen": "423435656534",
+      "destino": "261371439",
+      "date": "2025-09-25T15:47:40.691Z",
+      "monto": 2
     }
   ]
 }

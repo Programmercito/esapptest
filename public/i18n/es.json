@@ -44,7 +44,12 @@
     "select_destination_account": "Seleccione una cuenta destino",
     "enter_valid_amount": "Ingrese un monto válido",
     "insufficient_balance": "Saldo insuficiente",
-    "cannot_transfer_to_same_account": "No se puede transferir a la misma cuenta"
+    "cannot_transfer_to_same_account": "No se puede transferir a la misma cuenta",
+    "receipt": {
+      "title": "Comprobante de transacción",
+      "status": "Estado",
+      "status_done": "Realizado"
+    }
   },
   "history": {
     "manage_orders": "Administrar Pedidos",

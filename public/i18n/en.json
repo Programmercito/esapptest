@@ -44,7 +44,12 @@
     "select_destination_account": "Select a destination account",
     "enter_valid_amount": "Enter a valid amount",
     "insufficient_balance": "Insufficient balance",
-    "cannot_transfer_to_same_account": "Cannot transfer to the same account"
+    "cannot_transfer_to_same_account": "Cannot transfer to the same account",
+    "receipt": {
+      "title": "Transaction Receipt",
+      "status": "Status",
+      "status_done": "Done"
+    }
   },
   "history": {
     "manage_orders": "Manage Orders",
