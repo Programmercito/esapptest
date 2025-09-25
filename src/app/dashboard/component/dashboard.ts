@@ -9,11 +9,11 @@ import { MessageService } from 'primeng/api';
 import { Subscription } from 'rxjs';
 import { TableModule } from "primeng/table";
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
-
+import { ChartModule } from 'primeng/chart';
 
 @Component({
   selector: 'app-dashboard',
-  imports: [CurrencyPipe, TableModule, TranslateModule],
+  imports: [CurrencyPipe, TableModule, TranslateModule, ChartModule],
   templateUrl: './dashboard.html',
   styleUrl: './dashboard.scss',
   standalone: true,
@@ -28,6 +28,7 @@ export class Dashboard implements OnInit, OnDestroy {
   todayammount: number = 0;
   prices: any[] = [];
   private sub!: Subscription;
+  chartData: any;
 
 
   constructor(private historyApi: HistoryApi,

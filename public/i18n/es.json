@@ -28,7 +28,8 @@
     "crypto_prices": "Precios Crypto Monedas",
     "ticket": "Ticket",
     "price": "Precio",
-    "transfer_today": "Total Hoy"
+    "transfer_today": "Total Hoy",
+    "received_money": "Dinero recibido"
   },
   "transaction": {
     "origin_client": "Cliente origen",

@@ -28,7 +28,8 @@
     "crypto_prices": "Crypto Currency Prices",
     "ticket": "Ticket",
     "price": "Price",
-    "transfer_today": "Transfers Today"
+    "transfer_today": "Transfers Today",
+    "received_money": "Received Money"
   },
   "transaction": {
     "origin_client": "Origin Client",
