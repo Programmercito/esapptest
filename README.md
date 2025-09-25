@@ -1,59 +1,66 @@
-# Sakai19
+# Sakai NG Project
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.0.5.
+Este es un proyecto de Angular que utiliza un `json-server` como backend simulado.
 
-## Development server
+## Opciones de Ejecución
 
-To start a local development server, run:
+Puedes ejecutar este proyecto de dos maneras: usando Docker (recomendado para un entorno aislado y consistente) o localmente en tu máquina.
 
-```bash
-ng serve
-```
+---
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+### 1. Ejecutar con Docker (Recomendado)
 
-## Code scaffolding
+Esta es la forma más sencilla de levantar todo el entorno de desarrollo (frontend y backend) con un solo comando.
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+#### Prerrequisitos
+*   [Docker](https://www.docker.com/products/docker-desktop/)
+*   [Docker Compose](https://docs.docker.com/compose/install/) (generalmente incluido con Docker Desktop)
 
-```bash
-ng generate component component-name
-```
+#### Pasos
+1.  Asegúrate de que Docker Desktop esté en ejecución.
+2.  Abre una terminal en la raíz del proyecto y ejecuta el siguiente comando:
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+    ```bash
+    docker-compose up --build
+    ```
+    *   La opción `--build` es necesaria la primera vez para construir la imagen de Angular. Puede tardar unos minutos.
+    *   Si quieres que se ejecute en segundo plano, puedes añadir la opción `-d`.
 
-```bash
-ng generate --help
-```
+3.  Una vez que los contenedores estén listos:
+    *   **Frontend (Angular)** estará disponible en: `http://localhost:4200`
+    *   **Backend (API)** estará disponible en: `http://localhost:3000`
 
-## Building
+---
 
-To build the project run:
+### 2. Ejecutar Localmente
 
-```bash
-ng build
-```
+Si prefieres no usar Docker, puedes ejecutar el frontend y el backend por separado en tu máquina.
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+#### Prerrequisitos
+*   [Node.js](https://nodejs.org/) (versión 20.x recomendada)
+*   [Angular CLI](https://angular.dev/tools/cli) instalado globalmente.
 
-## Running unit tests
+    ```bash
+    npm install -g @angular/cli
+    ```
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+#### Pasos
+1.  **Instalar dependencias:**
+    Abre una terminal en la raíz del proyecto y ejecuta:
+    ```bash
+    npm install
+    ```
 
-```bash
-ng test
-```
+2.  **Iniciar el Backend (json-server):**
+    En una terminal, ejecuta el siguiente comando para iniciar el servidor de la API:
+    ```bash
+    npx json-server --watch db.json
+    ```
+    El backend estará disponible en `http://localhost:3000`.
 
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+3.  **Iniciar el Frontend (Angular):**
+    En **otra** terminal, ejecuta el siguiente comando para iniciar la aplicación de Angular:
+    ```bash
+    ng serve
+    ```
+    El frontend estará disponible en `http://localhost:4200`. La aplicación se recargará automáticamente si realizas cambios en los archivos.
