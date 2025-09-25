@@ -1,0 +1,552 @@
+{
+  "users": [
+    {
+      "gender": "male",
+      "name": {
+        "title": "Mr",
+        "first": "Giray",
+        "last": "Kılıççı"
+      },
+      "location": {
+        "street": {
+          "number": 7213,
+          "name": "Tunalı Hilmi Cd"
+        },
+        "city": "Osmaniye",
+        "state": "Sakarya",
+        "country": "Turkey",
+        "postcode": 30979,
+        "coordinates": {
+          "latitude": "70.6276",
+          "longitude": "-139.4858"
+        },
+        "timezone": {
+          "offset": "-1:00",
+          "description": "Azores, Cape Verde Islands"
+        }
+      },
+      "email": "giray.kilicci@example.com",
+      "login": {
+        "uuid": "786bafa3-12ad-4729-bafb-b6f0536568bf",
+        "username": "yellowpanda753",
+        "password": "person",
+        "salt": "flM1DkJT",
+        "md5": "70e8504666788718f24d4d2b31fd70fb",
+        "sha1": "429991b9b88f583c60ac38ecc3d8be7be57851c8",
+        "sha256": "d8496c9c14b6992c1d3c700d56a08adbd2a33517318fb5c14ff7a575edf3d6ca"
+      },
+      "dob": {
+        "date": "1966-05-16T16:40:53.164Z",
+        "age": 59
+      },
+      "registered": {
+        "date": "2021-05-13T04:48:55.545Z",
+        "age": 4
+      },
+      "phone": "(314)-345-7956",
+      "cell": "(959)-088-1493",
+      "id": "423435656534",
+      "picture": {
+        "large": "https://randomuser.me/api/portraits/men/2.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/men/2.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/men/2.jpg"
+      },
+      "nat": "TR",
+      "balance": 7
+    },
+    {
+      "gender": "male",
+      "name": {
+        "title": "Mr",
+        "first": "Slavoljub",
+        "last": "Bajević"
+      },
+      "location": {
+        "street": {
+          "number": 6280,
+          "name": "Mirka Damjanovića"
+        },
+        "city": "Aranđelovac",
+        "state": "Šumadija",
+        "country": "Serbia",
+        "postcode": 64259,
+        "coordinates": {
+          "latitude": "58.3591",
+          "longitude": "-163.2566"
+        },
+        "timezone": {
+          "offset": "-5:00",
+          "description": "Eastern Time (US & Canada), Bogota, Lima"
+        }
+      },
+      "email": "slavoljub.bajevic@example.com",
+      "login": {
+        "uuid": "b04a80d9-2091-4e1e-a0ab-2b5e4fbd17a0",
+        "username": "purpleostrich268",
+        "password": "7777777",
+        "salt": "jcLe5e4P",
+        "md5": "002de9fe1d8a823246f2065382fb37cc",
+        "sha1": "c6ec9b9d07c9b7d77562141aaad2168e8996985d",
+        "sha256": "7fff90e8742d3135c7bedea79ef379a63b70acb7a8a2e54ff173e9ab70d37ad7"
+      },
+      "dob": {
+        "date": "1986-01-26T18:22:38.240Z",
+        "age": 39
+      },
+      "registered": {
+        "date": "2008-11-24T02:19:46.503Z",
+        "age": 16
+      },
+      "phone": "019-7814-603",
+      "cell": "061-2223-529",
+      "id": "261371439",
+      "picture": {
+        "large": "https://randomuser.me/api/portraits/men/88.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/men/88.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/men/88.jpg"
+      },
+      "nat": "RS",
+      "balance": 3925
+    },
+    {
+      "gender": "female",
+      "name": {
+        "title": "Mrs",
+        "first": "Maria",
+        "last": "Thompson"
+      },
+      "location": {
+        "street": {
+          "number": 260,
+          "name": "Caversham Valley Road"
+        },
+        "city": "New Plymouth",
+        "state": "Tasman",
+        "country": "New Zealand",
+        "postcode": 63499,
+        "coordinates": {
+          "latitude": "50.1547",
+          "longitude": "52.6372"
+        },
+        "timezone": {
+          "offset": "-3:00",
+          "description": "Brazil, Buenos Aires, Georgetown"
+        }
+      },
+      "email": "maria.thompson@example.com",
+      "login": {
+        "uuid": "ab95029c-910f-4135-a56f-8c72b225531b",
+        "username": "yellowlion801",
+        "password": "grumpy",
+        "salt": "fc8fpwxu",
+        "md5": "7f28301cc28ea25a00572ab320c188a4",
+        "sha1": "4efbd9c136e7353032eed894d4b1cfb64d7dd22c",
+        "sha256": "2ab4ea49b361dd7f844182a18b41007133a5c6ba4543e4a73fd49e6c74e1a7f0"
+      },
+      "dob": {
+        "date": "1971-03-23T02:21:47.298Z",
+        "age": 54
+      },
+      "registered": {
+        "date": "2005-05-31T14:13:31.382Z",
+        "age": 20
+      },
+      "phone": "(113)-321-7757",
+      "cell": "(996)-910-4782",
+      "id": "45345353455476",
+      "picture": {
+        "large": "https://randomuser.me/api/portraits/women/67.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/women/67.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/women/67.jpg"
+      },
+      "nat": "NZ",
+      "balance": 2010
+    },
+    {
+      "gender": "female",
+      "name": {
+        "title": "Mrs",
+        "first": "Kaja",
+        "last": "Hatland"
+      },
+      "location": {
+        "street": {
+          "number": 3048,
+          "name": "Bjerkealléen"
+        },
+        "city": "Kvernaland",
+        "state": "Bergen",
+        "country": "Norway",
+        "postcode": "1001",
+        "coordinates": {
+          "latitude": "46.5136",
+          "longitude": "178.3795"
+        },
+        "timezone": {
+          "offset": "+8:00",
+          "description": "Beijing, Perth, Singapore, Hong Kong"
+        }
+      },
+      "email": "kaja.hatland@example.com",
+      "login": {
+        "uuid": "748d4161-8336-408f-b69b-1336e6b4a3bd",
+        "username": "sadbutterfly313",
+        "password": "mike1",
+        "salt": "mnxcI0By",
+        "md5": "68d5abdbdbe67c6f58ea59061a555f0d",
+        "sha1": "1a07bce79319f6cc2006ba5953353f2dc8f87cae",
+        "sha256": "994c9f06c5ced953690c3142dbd692525debad76535a1c8ab76b93d71a68033c"
+      },
+      "dob": {
+        "date": "1956-01-09T09:56:05.366Z",
+        "age": 69
+      },
+      "registered": {
+        "date": "2009-12-15T21:08:10.674Z",
+        "age": 15
+      },
+      "phone": "57262784",
+      "cell": "96932379",
+      "id": "09015619616",
+      "picture": {
+        "large": "https://randomuser.me/api/portraits/women/88.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/women/88.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/women/88.jpg"
+      },
+      "nat": "NO",
+      "balance": 2026
+    },
+    {
+      "gender": "female",
+      "name": {
+        "title": "Mrs",
+        "first": "Aaliyah",
+        "last": "Lewis"
+      },
+      "location": {
+        "street": {
+          "number": 4742,
+          "name": "Carlton Avenue"
+        },
+        "city": "Rotorua",
+        "state": "Tasman",
+        "country": "New Zealand",
+        "postcode": 18483,
+        "coordinates": {
+          "latitude": "48.0612",
+          "longitude": "5.6491"
+        },
+        "timezone": {
+          "offset": "+9:00",
+          "description": "Tokyo, Seoul, Osaka, Sapporo, Yakutsk"
+        }
+      },
+      "email": "aaliyah.lewis@example.com",
+      "login": {
+        "uuid": "077d71ac-1407-430e-a96d-5e55cc6913a2",
+        "username": "ticklishgoose893",
+        "password": "hearts",
+        "salt": "qcCmd6PM",
+        "md5": "b07695efcc9fdc319d6e09c89415d5e3",
+        "sha1": "4441a88fce4d43c57aa77a2a193ee6861c788a18",
+        "sha256": "1dcc85fd3ad0017540ddd213471599989237f54e6ea53dc556b49182ea85af56"
+      },
+      "dob": {
+        "date": "1963-12-05T05:48:12.465Z",
+        "age": 61
+      },
+      "registered": {
+        "date": "2009-07-26T07:06:06.195Z",
+        "age": 16
+      },
+      "phone": "(745)-026-1091",
+      "cell": "(255)-327-5258",
+      "id": "543245345342",
+      "picture": {
+        "large": "https://randomuser.me/api/portraits/women/77.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/women/77.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/women/77.jpg"
+      },
+      "nat": "NZ",
+      "balance": 2026
+    },
+    {
+      "gender": "female",
+      "name": {
+        "title": "Miss",
+        "first": "Sandra",
+        "last": "Aguilar"
+      },
+      "location": {
+        "street": {
+          "number": 5661,
+          "name": "Calle del Prado"
+        },
+        "city": "Albacete",
+        "state": "Comunidad de Madrid",
+        "country": "Spain",
+        "postcode": 93828,
+        "coordinates": {
+          "latitude": "-30.1807",
+          "longitude": "15.4856"
+        },
+        "timezone": {
+          "offset": "+4:00",
+          "description": "Abu Dhabi, Muscat, Baku, Tbilisi"
+        }
+      },
+      "email": "sandra.aguilar@example.com",
+      "login": {
+        "uuid": "d0199d07-e992-4b00-bbcb-c2e3c8bd6259",
+        "username": "redpeacock250",
+        "password": "sang",
+        "salt": "MJiSabBR",
+        "md5": "2135e70b6fd970f8d088e89a598fabfa",
+        "sha1": "fe6d5a85e071153488cfc90a884d60037fffe06d",
+        "sha256": "48e877b233d280605501215871b95ae3b4ece8db035cf65800c50f73c4e5b977"
+      },
+      "dob": {
+        "date": "1997-03-16T11:34:15.703Z",
+        "age": 28
+      },
+      "registered": {
+        "date": "2006-03-11T00:23:02.457Z",
+        "age": 19
+      },
+      "phone": "957-831-366",
+      "cell": "672-795-113",
+      "id": "10940788-I",
+      "picture": {
+        "large": "https://randomuser.me/api/portraits/women/77.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/women/77.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/women/77.jpg"
+      },
+      "nat": "ES",
+      "balance": 2006
+    },
+    {
+      "gender": "female",
+      "name": {
+        "title": "Miss",
+        "first": "Anitha",
+        "last": "Chiplunkar"
+      },
+      "location": {
+        "street": {
+          "number": 9865,
+          "name": "Marine Drive"
+        },
+        "city": "Muzaffarnagar",
+        "state": "Odisha",
+        "country": "India",
+        "postcode": 32534,
+        "coordinates": {
+          "latitude": "8.4474",
+          "longitude": "19.4444"
+        },
+        "timezone": {
+          "offset": "+8:00",
+          "description": "Beijing, Perth, Singapore, Hong Kong"
+        }
+      },
+      "email": "anitha.chiplunkar@example.com",
+      "login": {
+        "uuid": "132df8ab-4193-4d5d-b2ec-ede62baff085",
+        "username": "smalltiger861",
+        "password": "techno",
+        "salt": "gKm1xZoh",
+        "md5": "a9c1f1bd46c01aff9c6cf62dbac6f420",
+        "sha1": "b1c8cec11a5acc79ccfe875f84cad63531a34f1b",
+        "sha256": "ca252c9b3b129e2e5b04d66173717edc848e461254d2befc74e82f6f7292b92a"
+      },
+      "dob": {
+        "date": "1994-10-24T12:16:04.578Z",
+        "age": 30
+      },
+      "registered": {
+        "date": "2010-09-09T13:52:13.508Z",
+        "age": 15
+      },
+      "phone": "9699053895",
+      "cell": "9869304994",
+      "id": "023979655979",
+      "picture": {
+        "large": "https://randomuser.me/api/portraits/women/13.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/women/13.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/women/13.jpg"
+      },
+      "nat": "IN",
+      "balance": 2000
+    }
+  ],
+  "transactions": [
+    {
+      "id": "132df8ab-4193-4d5d-b2ec-ede62baff086",
+      "origen": "543245345342",
+      "destino": "023979655979",
+      "date": "1956-01-09T09:56:05.366Z",
+      "monto": 10
+    },
+    {
+      "id": "6facafbb-f12c-4ff9-be17-564e9cf29e1d",
+      "origen": "423435656534",
+      "destino": "261371439",
+      "date": "2025-09-24T19:00:47.116Z",
+      "monto": 12
+    },
+    {
+      "id": "80af841f-bed2-4019-9489-1676e6d19e33",
+      "origen": "423435656534",
+      "destino": "09015619616",
+      "date": "2025-09-24T19:03:49.265Z",
+      "monto": 32
+    },
+    {
+      "id": "1fb1665b-d388-4a56-bb43-26b5d25bf2a1",
+      "origen": "261371439",
+      "destino": "423435656534",
+      "date": "2025-09-24T19:12:01.752Z",
+      "monto": 45
+    },
+    {
+      "id": "0f233c1a-1059-41c4-a5e9-df7e732e0793",
+      "origen": "45345353455476",
+      "destino": "543245345342",
+      "date": "2025-09-24T19:36:28.608Z",
+      "monto": 1
+    },
+    {
+      "id": "e97a555b-8bf5-44cf-a2ad-08ab5be21cbe",
+      "origen": "45345353455476",
+      "destino": "543245345342",
+      "date": "2025-09-24T19:36:31.193Z",
+      "monto": 1
+    },
+    {
+      "id": "860ca552-0af9-4418-894a-eebc042a2f86",
+      "origen": "45345353455476",
+      "destino": "543245345342",
+      "date": "2025-09-24T19:36:32.527Z",
+      "monto": 1
+    },
+    {
+      "id": "98d77e90-e0be-4584-8e46-b3dd4d771403",
+      "origen": "45345353455476",
+      "destino": "543245345342",
+      "date": "2025-09-24T19:36:34.112Z",
+      "monto": 1
+    },
+    {
+      "id": "30be1697-c59e-4b15-9195-29c111da172a",
+      "origen": "45345353455476",
+      "destino": "543245345342",
+      "date": "2025-09-24T19:36:37.009Z",
+      "monto": 2
+    },
+    {
+      "id": "323d3538-1747-4bc4-a2c4-97980c869115",
+      "origen": "45345353455476",
+      "destino": "543245345342",
+      "date": "2025-09-24T19:36:39.217Z",
+      "monto": 4
+    },
+    {
+      "id": "5a3e8143-5e60-4f38-8a23-40cf5a9fb17b",
+      "origen": "09015619616",
+      "destino": "543245345342",
+      "date": "2025-09-24T19:36:51.732Z",
+      "monto": 6
+    },
+    {
+      "id": "6193a150-6bd4-4c30-9d0a-e7fb357da6a1",
+      "origen": "423435656534",
+      "destino": "261371439",
+      "date": "2025-09-24T21:26:25.100Z",
+      "monto": 2000
+    },
+    {
+      "id": "00252a6f-5062-411d-bee3-fb06403dc782",
+      "origen": "423435656534",
+      "destino": "261371439",
+      "date": "2025-09-24T22:33:33.847Z",
+      "monto": 1
+    },
+    {
+      "id": "524b423d-1549-454e-8270-eef5a8910125",
+      "origen": "261371439",
+      "destino": "423435656534",
+      "date": "2025-09-24T22:39:34.440Z",
+      "monto": 1
+    },
+    {
+      "id": "82759341-98a5-410a-9d6b-bd28c3823de2",
+      "origen": "261371439",
+      "destino": "423435656534",
+      "date": "2025-09-24T22:39:39.686Z",
+      "monto": 2
+    },
+    {
+      "id": "2e5dd7aa-91e2-4039-9e40-7dbfdcc4d59f",
+      "origen": "261371439",
+      "destino": "423435656534",
+      "date": "2025-09-24T22:39:42.496Z",
+      "monto": 3
+    },
+    {
+      "id": "a81257c2-2666-458b-8439-968a46fe6222",
+      "origen": "261371439",
+      "destino": "423435656534",
+      "date": "2025-09-24T22:39:45.541Z",
+      "monto": 4
+    },
+    {
+      "id": "65a7e2a8-4a9a-4aed-b89c-ff4bfe9b515e",
+      "origen": "261371439",
+      "destino": "423435656534",
+      "date": "2025-09-24T22:39:48.844Z",
+      "monto": 5
+    },
+    {
+      "id": "31f69aca-d7af-4f0b-aa95-652195069dbc",
+      "origen": "261371439",
+      "destino": "423435656534",
+      "date": "2025-09-24T22:39:52.106Z",
+      "monto": 6
+    },
+    {
+      "id": "3acfb2b6-728a-466a-8efb-9814ed2d0d01",
+      "origen": "261371439",
+      "destino": "423435656534",
+      "date": "2025-09-24T22:39:54.115Z",
+      "monto": 6
+    },
+    {
+      "id": "35c70748-d740-477a-aaee-5e1d8871439e",
+      "origen": "423435656534",
+      "destino": "45345353455476",
+      "date": "2025-09-25T03:04:04.349Z",
+      "monto": 20
+    },
+    {
+      "id": "3c3940ba-7818-40da-a61d-700f560f8bc6",
+      "origen": "261371439",
+      "destino": "423435656534",
+      "date": "2025-09-25T06:31:31.794Z",
+      "monto": 10
+    },
+    {
+      "id": "ba5d652e-3cb3-4375-a703-a6d5e502b4f6",
+      "origen": "261371439",
+      "destino": "10940788-I",
+      "date": "2025-09-25T06:31:48.790Z",
+      "monto": 6
+    },
+    {
+      "id": "596232e1-1299-4abe-a82e-ec9c5ddad45b",
+      "origen": "423435656534",
+      "destino": "543245345342",
+      "date": "2025-09-25T07:11:35.758Z",
+      "monto": 10
+    }
+  ]
+}
