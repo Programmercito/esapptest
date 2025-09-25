@@ -44,6 +44,9 @@ export class Dashboard implements OnInit, OnDestroy {
     this.binanceservice.disconnect();
   }
   ngOnInit(): void {
+    this.translate.onLangChange.subscribe(() => {
+      this.calculateData(this.lista);
+    });
 
     this.binanceservice.connect();
     this.sub = this.binanceservice.getPrices().subscribe(data => {
@@ -125,6 +128,26 @@ export class Dashboard implements OnInit, OnDestroy {
         this.cuentaConMasTransacciones = user;
       }
     }
+
+    const salesData = new Map<string, number>();
+    for (const transaction of lista) {
+      if (transaction.destino) {
+        salesData.set(transaction.destino, (salesData.get(transaction.destino) || 0) + transaction.monto);
+      }
+    }
+
+    const labels = Array.from(salesData.keys());
+    const data = Array.from(salesData.values());
+
+    this.chartData = {
+      labels: labels,
+      datasets: [
+        {
+          label: this.translate.instant('dashboard.chart_label'),
+          data: data,
+        },
+      ],
+    };
   }
 }
 

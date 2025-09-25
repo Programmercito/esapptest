@@ -29,7 +29,8 @@
     "ticket": "Ticket",
     "price": "Price",
     "transfer_today": "Transfers Today",
-    "received_money": "Received Money"
+    "received_money": "Received Money",
+    "chart_label": "Money"
   },
   "transaction": {
     "origin_client": "Origin Client",
