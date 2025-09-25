@@ -44,12 +44,13 @@ export class Dashboard implements OnInit, OnDestroy {
 
     this.binanceservice.connect();
     this.sub = this.binanceservice.getPrices().subscribe(data => {
-      this.prices = [
-        ...this.prices.filter(p => p.s !== data.s),
-        data
-      ];
-      //ordeno prices por S
-      this.prices.sort((a, b) => a.s.localeCompare(b.s));
+      const index = this.prices.findIndex(p => p.s === data.s);
+      if (index > -1) {
+        this.prices[index] = data;
+        this.prices = [...this.prices];
+      } else {
+        this.prices = [...this.prices, data];
+      }
     });
 
     this.historyApi.getTransactions().subscribe({

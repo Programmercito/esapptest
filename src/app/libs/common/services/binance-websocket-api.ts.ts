@@ -26,7 +26,9 @@ export class BinanceWebsocketApiTs {
 
     this.ws.onmessage = (event) => {
       const data = JSON.parse(event.data);
-      this.priceSubject.next(data);
+      if (data && data.s) {
+        this.priceSubject.next(data);
+      }
     };
 
     this.ws.onerror = (error) => {
