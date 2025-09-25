@@ -19,7 +19,8 @@
     "select_account": "Seleccione una cuenta",
     "error": "Error",
     "success": "Éxito",
-    "confirm": "Confirmar"
+    "confirm": "Confirmar",
+    "close":"Cerrar"
   },
   "dashboard": {
     "total_transactions": "Total Transacciones",

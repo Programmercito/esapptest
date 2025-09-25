@@ -52,7 +52,7 @@
         "thumbnail": "https://randomuser.me/api/portraits/thumb/men/2.jpg"
       },
       "nat": "TR",
-      "balance": 7
+      "balance": 30
     },
     {
       "gender": "male",
@@ -106,7 +106,7 @@
         "thumbnail": "https://randomuser.me/api/portraits/thumb/men/88.jpg"
       },
       "nat": "RS",
-      "balance": 3925
+      "balance": 3899
     },
     {
       "gender": "female",
@@ -160,7 +160,7 @@
         "thumbnail": "https://randomuser.me/api/portraits/thumb/women/67.jpg"
       },
       "nat": "NZ",
-      "balance": 2010
+      "balance": 2014
     },
     {
       "gender": "female",
@@ -268,7 +268,7 @@
         "thumbnail": "https://randomuser.me/api/portraits/thumb/women/77.jpg"
       },
       "nat": "NZ",
-      "balance": 2026
+      "balance": 2027
     },
     {
       "gender": "female",
@@ -376,7 +376,7 @@
         "thumbnail": "https://randomuser.me/api/portraits/thumb/women/13.jpg"
       },
       "nat": "IN",
-      "balance": 2000
+      "balance": 2001
     }
   ],
   "transactions": [
@@ -547,6 +547,153 @@
       "destino": "543245345342",
       "date": "2025-09-25T07:11:35.758Z",
       "monto": 10
+    },
+    {
+      "id": "0ffa0b6c-8ead-4dc2-9c62-6bd009177709",
+      "origen": "423435656534",
+      "destino": "261371439",
+      "date": "2025-09-25T13:41:02.554Z",
+      "monto": 7
+    },
+    {
+      "id": "a26dd7e1-fe68-41d8-b804-1f1373db2083",
+      "origen": "261371439",
+      "destino": "423435656534",
+      "date": "2025-09-25T14:26:29.673Z",
+      "monto": 10
+    },
+    {
+      "id": "312a4460-945c-4ebf-bd61-b756d5e83e91",
+      "origen": "261371439",
+      "destino": "423435656534",
+      "date": "2025-09-25T14:27:05.684Z",
+      "monto": 2
+    },
+    {
+      "id": "3d9b49f8-8813-43ed-81e2-7062bd055692",
+      "origen": "261371439",
+      "destino": "423435656534",
+      "date": "2025-09-25T14:28:39.345Z",
+      "monto": 2
+    },
+    {
+      "id": "284cf7c7-ed63-480c-8662-5ead4fc04ca9",
+      "origen": "261371439",
+      "destino": "423435656534",
+      "date": "2025-09-25T14:29:41.321Z",
+      "monto": 2
+    },
+    {
+      "id": "0398e00e-c6ae-41c8-a702-1fb84e0714d2",
+      "origen": "261371439",
+      "destino": "423435656534",
+      "date": "2025-09-25T14:30:32.564Z",
+      "monto": 2
+    },
+    {
+      "id": "6c0ceb87-cf0d-4dc5-9ad8-4f4047f59099",
+      "origen": "261371439",
+      "destino": "423435656534",
+      "date": "2025-09-25T14:30:45.769Z",
+      "monto": 2
+    },
+    {
+      "id": "a6bdda47-e6e0-473e-bb55-63ba644c8e75",
+      "origen": "261371439",
+      "destino": "423435656534",
+      "date": "2025-09-25T14:32:33.271Z",
+      "monto": 2
+    },
+    {
+      "id": "70d223df-8f90-4bd5-8f30-66cf731a07e0",
+      "origen": "261371439",
+      "destino": "45345353455476",
+      "date": "2025-09-25T14:39:55.526Z",
+      "monto": 2
+    },
+    {
+      "id": "0b2bf4b1-a890-44e4-a351-cedf002ab573",
+      "origen": "261371439",
+      "destino": "45345353455476",
+      "date": "2025-09-25T14:40:03.051Z",
+      "monto": 2
+    },
+    {
+      "id": "e31a621d-2fbe-431f-8966-0b10f802bbcf",
+      "origen": "261371439",
+      "destino": "423435656534",
+      "date": "2025-09-25T15:13:02.009Z",
+      "monto": 1
+    },
+    {
+      "id": "b282cb6e-09cd-4f66-98b8-2cdcadbb4c17",
+      "origen": "261371439",
+      "destino": "423435656534",
+      "date": "2025-09-25T15:14:11.789Z",
+      "monto": 1
+    },
+    {
+      "id": "d36b75a7-1e80-4402-a028-673d4fe4d38d",
+      "origen": "261371439",
+      "destino": "423435656534",
+      "date": "2025-09-25T15:14:41.411Z",
+      "monto": 1
+    },
+    {
+      "id": "7da87b8d-c99f-49ab-9318-1c1393f7c2c0",
+      "origen": "261371439",
+      "destino": "423435656534",
+      "date": "2025-09-25T15:15:12.986Z",
+      "monto": 1
+    },
+    {
+      "id": "91deca0b-02ba-415f-aa29-14f409d9746c",
+      "origen": "261371439",
+      "destino": "423435656534",
+      "date": "2025-09-25T15:16:20.968Z",
+      "monto": 1
+    },
+    {
+      "id": "bfa0f10a-85e8-4871-af92-767a2314b5aa",
+      "origen": "261371439",
+      "destino": "423435656534",
+      "date": "2025-09-25T15:16:47.313Z",
+      "monto": 1
+    },
+    {
+      "id": "b6193a84-808d-4b71-8652-0b4dfd28f015",
+      "origen": "261371439",
+      "destino": "423435656534",
+      "date": "2025-09-25T15:20:28.408Z",
+      "monto": 1
+    },
+    {
+      "id": "433dbb3f-6110-41e3-b992-e1d5370550d7",
+      "origen": "261371439",
+      "destino": "423435656534",
+      "date": "2025-09-25T15:32:29.286Z",
+      "monto": 1
+    },
+    {
+      "id": "636bcecc-c621-4118-9d08-cafc0ec4b5f0",
+      "origen": "261371439",
+      "destino": "45345353455476",
+      "date": "2025-09-25T15:38:44.310Z",
+      "monto": 1
+    },
+    {
+      "id": "9b8034ff-e5fe-40bb-bd7e-1d50026838d7",
+      "origen": "261371439",
+      "destino": "023979655979",
+      "date": "2025-09-25T15:38:54.519Z",
+      "monto": 1
+    },
+    {
+      "id": "eaf17d39-fc79-4759-84f4-918dde61d148",
+      "origen": "45345353455476",
+      "destino": "543245345342",
+      "date": "2025-09-25T15:39:05.776Z",
+      "monto": 1
     }
   ]
 }

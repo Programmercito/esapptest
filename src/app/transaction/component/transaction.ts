@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { FluidModule } from 'primeng/fluid';
 import { InputTextModule } from 'primeng/inputtext';
@@ -7,27 +7,42 @@ import { TransactionApi } from '../service/transaction-api';
 import { UserModel } from '@/libs/models/users-model';
 import { ConfirmationService, MessageService } from 'primeng/api';
 import { ToastModule } from 'primeng/toast';
-import { SelectModule } from 'primeng/select';
+import { Select, SelectModule } from 'primeng/select';
 import { Button, ButtonModule } from "primeng/button";
 import { InputNumberModule } from 'primeng/inputnumber';
 import { ConfirmDialogModule } from 'primeng/confirmdialog';
 import { TransactionModel } from '@/libs/models/transaction-model';
-import { CurrencyPipe } from '@angular/common';
+import { CurrencyPipe, DatePipe } from '@angular/common';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { Dialog } from "primeng/dialog";
+import { BaseIcon } from "primeng/icons/baseicon";
 
 @Component({
   selector: 'app-transaction',
-  imports: [FluidModule, FormsModule, InputTextModule, ToastModule, SelectModule, ButtonModule, InputNumberModule, ConfirmDialogModule, CurrencyPipe, TranslateModule], // Corrected import
+  imports: [FluidModule, FormsModule, InputTextModule, ToastModule, SelectModule, ButtonModule, InputNumberModule, ConfirmDialogModule, CurrencyPipe, DatePipe, TranslateModule, Dialog, BaseIcon], // Corrected import
   templateUrl: './transaction.html',
   standalone: true,
   providers: [MessageService, ConfirmationService],
   styleUrl: './transaction.scss'
 })
 export class Transaction {
+  cerrar() {
+    this.infotransaction = false;
+    this.origin = {} as UserModel;
+    this.destination = {} as UserModel;
+    this.monto = 0;
+    this.originSelect.clear();
+    this.destinationSelect.clear();
+  }
   users: UserModel[] = [];
   origin: UserModel;
   destination: UserModel;
   monto: number = 0;
+  infotransaction: boolean = false;
+  transaction: TransactionModel = {} as TransactionModel;
+  @ViewChild('origins') originSelect!: Select;
+  @ViewChild('destinations') destinationSelect!: Select;
+
   constructor(
     private transactionapi: TransactionApi,
     private messageservice: MessageService,
@@ -57,6 +72,7 @@ export class Transaction {
         accept: () => {
           this.transactionProcess();
           this.messageservice.add({ severity: 'success', summary: this.translate.instant('common.success'), detail: this.translate.instant('transaction.transaction_successful') });
+          this.infotransaction = true;
           this.ngOnInit();
         }
       });
@@ -74,7 +90,14 @@ export class Transaction {
       date: new Date().toISOString(),
       monto: this.monto
     };
-    this.transactionapi.insertTransaction(transaction).subscribe({});
+    this.transactionapi.insertTransaction(transaction).subscribe({
+      next: (res: TransactionModel) => {
+        this.transaction = res;
+      },
+      error: (err) => {
+        this.messageservice.add({ severity: 'error', summary: this.translate.instant('common.error'), detail: this.translate.instant('transaction.transaction_failed') });
+      }
+    });
     this.origin.balance -= this.monto;
     this.destination.balance += this.monto;
     this.transactionapi.modifyUser(this.origin).subscribe({});;
