@@ -8,11 +8,12 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { MessageService } from 'primeng/api';
 import { Subscription } from 'rxjs';
 import { TableModule } from "primeng/table";
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 
 @Component({
   selector: 'app-dashboard',
-  imports: [CurrencyPipe, TableModule],
+  imports: [CurrencyPipe, TableModule, TranslateModule],
   templateUrl: './dashboard.html',
   styleUrl: './dashboard.scss',
   standalone: true,
@@ -32,7 +33,8 @@ export class Dashboard implements OnInit, OnDestroy {
   constructor(private historyApi: HistoryApi,
     private transactionApi: TransactionApi,
     private messageservice: MessageService,
-    private binanceservice: BinanceWebsocketApiTs
+    private binanceservice: BinanceWebsocketApiTs,
+    private translate: TranslateService
   ) {
 
   }
@@ -62,12 +64,12 @@ export class Dashboard implements OnInit, OnDestroy {
             this.calculateData(this.lista);
           },
           error: (error) => {
-            this.messageservice.add({ severity: 'error', summary: 'Error', detail: error.message });
+            this.messageservice.add({ severity: 'error', summary: this.translate.instant('COMMON.ERROR'), detail: error.message });
           }
         });
       },
       error: (error) => {
-        this.messageservice.add({ severity: 'error', summary: 'Error', detail: error.message });
+        this.messageservice.add({ severity: 'error', summary: this.translate.instant('COMMON.ERROR'), detail: error.message });
       }
     });
   }

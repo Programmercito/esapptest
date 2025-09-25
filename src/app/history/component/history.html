@@ -2,13 +2,13 @@
     <div class="flex flex-col md:flex-row gap-8">
         <div class="md:w-1/3">
             <div class="card flex flex-col gap-4">
-                <div class="font-semibold text-xl">Origen</div>
+                <div class="font-semibold text-xl">{{ 'COMMON.ORIGIN' | translate }}</div>
                 <div class="flex flex-col gap-2">
-                    <label for="name1">Cliente origen</label>
+                    <label for="name1">{{ 'TRANSACTION.ORIGIN_CLIENT' | translate }}</label>
                     <p-select [options]="this.users"
                         [(ngModel)]="origin" optionLabel="name"
                         [filter]="true" filterBy="name.first" [showClear]="true"
-                        placeholder="Select a Account" class="w-full md:w-56"
+                        [placeholder]="'COMMON.SELECT_ACCOUNT' | translate" class="w-full md:w-56"
                         (onChange)="origenChange($event)" (onClear)="onClear()">
                         <ng-template #selectedItem let-selectedOption>
                             <div class="flex items-center gap-2">
@@ -35,13 +35,13 @@
         </div>
         <div class="md:w-1/3">
             <div class="card flex flex-col gap-4">
-                <div class="font-semibold text-xl">Destino</div>
+                <div class="font-semibold text-xl">{{ 'COMMON.DESTINATION' | translate }}</div>
                 <div class="flex flex-col gap-2">
-                    <label for="name1">Cliente origen</label>
+                    <label for="name1">{{ 'TRANSACTION.DESTINATION_CLIENT' | translate }}</label>
                     <p-select [options]="this.users"
                         [(ngModel)]="destination" optionLabel="name"
                         [filter]="true" filterBy="name.first" [showClear]="true"
-                        placeholder="Select a Account" class="w-full md:w-56"
+                        [placeholder]="'COMMON.SELECT_ACCOUNT' | translate" class="w-full md:w-56"
                         (onChange)="destinoChange($event)"
                         (onClear)="onCleardes()">
                         <ng-template #selectedItem let-selectedOption>
@@ -68,9 +68,9 @@
         </div>
         <div class="md:w-1/3">
             <div class="card flex flex-col gap-4">
-                <div class="font-semibold text-xl">Monto</div>
+                <div class="font-semibold text-xl">{{ 'COMMON.AMOUNT' | translate }}</div>
                 <div class="flex flex-col gap-2">
-                    <label for="amount">Monto</label>
+                    <label for="amount">{{ 'COMMON.AMOUNT' | translate }}</label>
                     <p-inputnumber
                         mode="decimal" [minFractionDigits]="2"
                         [maxFractionDigits]="2"
@@ -88,18 +88,18 @@
         sortMode="multiple">
         <ng-template #caption>
             <div class="flex items-center justify-between">
-                <h5 class="m-0">Manage Orders</h5>
+                <h5 class="m-0">{{ 'HISTORY.MANAGE_ORDERS' | translate }}</h5>
             </div>
         </ng-template>
         <ng-template pTemplate="header">
             <tr>
-                <th pSortableColumn="origenName">Origen <p-sortIcon
+                <th pSortableColumn="origenName">{{ 'COMMON.ORIGIN' | translate }} <p-sortIcon
                         field="origenName" /></th>
-                <th pSortableColumn="destinoName">Destino <p-sortIcon
+                <th pSortableColumn="destinoName">{{ 'COMMON.DESTINATION' | translate }} <p-sortIcon
                         field="destinoName" /></th>
-                <th pSortableColumn="monto">Monto <p-sortIcon
+                <th pSortableColumn="monto">{{ 'COMMON.AMOUNT' | translate }} <p-sortIcon
                         field="monto" /></th>
-                <th pSortableColumn="date">Fecha <p-sortIcon
+                <th pSortableColumn="date">{{ 'HISTORY.DATE' | translate }} <p-sortIcon
                         field="date" /></th>
             </tr>
         </ng-template>

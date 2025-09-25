@@ -13,10 +13,11 @@ import { InputNumberModule } from 'primeng/inputnumber';
 import { ConfirmDialogModule } from 'primeng/confirmdialog';
 import { TransactionModel } from '@/libs/models/transaction-model';
 import { CurrencyPipe } from '@angular/common';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-transaction',
-  imports: [FluidModule, FormsModule, InputTextModule, ToastModule, SelectModule, ButtonModule, InputNumberModule, ConfirmDialogModule, CurrencyPipe], // Corrected import
+  imports: [FluidModule, FormsModule, InputTextModule, ToastModule, SelectModule, ButtonModule, InputNumberModule, ConfirmDialogModule, CurrencyPipe, TranslateModule], // Corrected import
   templateUrl: './transaction.html',
   standalone: true,
   providers: [MessageService, ConfirmationService],
@@ -30,7 +31,8 @@ export class Transaction {
   constructor(
     private transactionapi: TransactionApi,
     private messageservice: MessageService,
-    private confirmationService: ConfirmationService
+    private confirmationService: ConfirmationService,
+    private translate: TranslateService
   ) {
     this.origin = {} as UserModel;
     this.destination = {} as UserModel;
@@ -41,7 +43,7 @@ export class Transaction {
         this.users = res;
       },
       error: (err) => {
-        this.messageservice.add({ severity: 'error', summary: 'Error', detail: 'Error fetching users' });
+        this.messageservice.add({ severity: 'error', summary: this.translate.instant('COMMON.ERROR'), detail: 'Error fetching users' });
       }
     });
   }
@@ -49,12 +51,12 @@ export class Transaction {
     let valid = this.validar(this.monto, this.origin, this.destination);
     if (valid) {
       this.confirmationService.confirm({
-        message: 'Are you sure you want tranfer the selected products?',
-        header: 'Confirm',
+        message: this.translate.instant('TRANSACTION.CONFIRM_TRANSFER_MESSAGE'),
+        header: this.translate.instant('COMMON.CONFIRM'),
         icon: 'pi pi-exclamation-triangle',
         accept: () => {
           this.transactionProcess();
-          this.messageservice.add({ severity: 'success', summary: 'Success', detail: 'Transaction successful' });
+          this.messageservice.add({ severity: 'success', summary: this.translate.instant('COMMON.SUCCESS'), detail: this.translate.instant('TRANSACTION.TRANSACTION_SUCCESSFUL') });
           this.ngOnInit();
         }
       });
@@ -80,23 +82,23 @@ export class Transaction {
   }
   validar(monto: number, origen: UserModel, destino: UserModel) {
     if (!origen.id) {
-      this.messageservice.add({ severity: 'error', summary: 'Error', detail: 'Seleccione una cuenta de origen' });
+      this.messageservice.add({ severity: 'error', summary: this.translate.instant('COMMON.ERROR'), detail: this.translate.instant('TRANSACTION.SELECT_ORIGIN_ACCOUNT') });
       return false;
     }
     if (!destino.id) {
-      this.messageservice.add({ severity: 'error', summary: 'Error', detail: 'Seleccione una cuenta destino' });
+      this.messageservice.add({ severity: 'error', summary: this.translate.instant('COMMON.ERROR'), detail: this.translate.instant('TRANSACTION.SELECT_DESTINATION_ACCOUNT') });
       return false;
     }
     if (monto <= 0) {
-      this.messageservice.add({ severity: 'error', summary: 'Error', detail: 'Ingrese un monto válido' });
+      this.messageservice.add({ severity: 'error', summary: this.translate.instant('COMMON.ERROR'), detail: this.translate.instant('TRANSACTION.ENTER_VALID_AMOUNT') });
       return false;
     }
     if (origen.balance < monto) {
-      this.messageservice.add({ severity: 'error', summary: 'Error', detail: 'Saldo insuficiente' });
+      this.messageservice.add({ severity: 'error', summary: this.translate.instant('COMMON.ERROR'), detail: this.translate.instant('TRANSACTION.INSUFFICIENT_BALANCE') });
       return false;
     }
     if ((origen.id === destino.id)) {
-      this.messageservice.add({ severity: 'error', summary: 'Error', detail: 'No se puede transferir a la misma cuenta' });
+      this.messageservice.add({ severity: 'error', summary: this.translate.instant('COMMON.ERROR'), detail: this.translate.instant('TRANSACTION.CANNOT_TRANSFER_TO_SAME_ACCOUNT') });
       return false;
     }
     return true;

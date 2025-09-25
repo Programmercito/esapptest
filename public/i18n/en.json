@@ -1,0 +1,52 @@
+{
+  "TOPBAR": {
+    "PROFILE": "Profile"
+  },
+  "MENU": {
+    "HOME": "Home",
+    "DASHBOARD": "Dashboard",
+    "TRANSACTIONS": "Transactions",
+    "TRANSACTION": "Transaction",
+    "HISTORY": "History"
+  },
+  "COMMON": {
+    "ORIGIN": "Origin",
+    "DESTINATION": "Destination",
+    "AMOUNT": "Amount",
+    "NAME": "Name",
+    "BALANCE": "Balance",
+    "ACTION": "Action",
+    "SELECT_ACCOUNT": "Select an account",
+    "ERROR": "Error",
+    "SUCCESS": "Success",
+    "CONFIRM": "Confirm"
+  },
+  "DASHBOARD": {
+    "TOTAL_TRANSACTIONS": "Total Transactions",
+    "TOTAL_MONEY_MOVED": "Total Money Moved",
+    "ACCOUNT_WITH_MOST_TRANSACTIONS": "Account with most trans.",
+    "CRYPTO_PRICES": "Crypto Currency Prices",
+    "TICKET": "Ticket",
+    "PRICE": "Price"
+  },
+  "TRANSACTION": {
+    "ORIGIN_CLIENT": "Origin Client",
+    "DESTINATION_CLIENT": "Destination Client",
+    "AMOUNT_TO_TRANSFER": "Amount to transfer",
+    "TRANSFER": "Transfer",
+    "CONFIRM_TRANSFER_MESSAGE": "Are you sure you want to transfer the selected products?",
+    "TRANSACTION_SUCCESSFUL": "Transaction successful",
+    "SELECT_ORIGIN_ACCOUNT": "Select an origin account",
+    "SELECT_DESTINATION_ACCOUNT": "Select a destination account",
+    "ENTER_VALID_AMOUNT": "Enter a valid amount",
+    "INSUFFICIENT_BALANCE": "Insufficient balance",
+    "CANNOT_TRANSFER_TO_SAME_ACCOUNT": "Cannot transfer to the same account"
+  },
+  "HISTORY": {
+    "MANAGE_ORDERS": "Manage Orders",
+    "DATE": "Date"
+  },
+  "FOOTER": {
+    "SAKAI_BY": "SAKAI by"
+  }
+}

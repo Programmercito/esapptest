@@ -1,0 +1,52 @@
+{
+  "TOPBAR": {
+    "PROFILE": "Perfil"
+  },
+  "MENU": {
+    "HOME": "Inicio",
+    "DASHBOARD": "Dashboard",
+    "TRANSACTIONS": "Transacciones",
+    "TRANSACTION": "Transacción",
+    "HISTORY": "Historial"
+  },
+  "COMMON": {
+    "ORIGIN": "Origen",
+    "DESTINATION": "Destino",
+    "AMOUNT": "Monto",
+    "NAME": "Nombre",
+    "BALANCE": "Saldo",
+    "ACTION": "Acción",
+    "SELECT_ACCOUNT": "Seleccione una cuenta",
+    "ERROR": "Error",
+    "SUCCESS": "Éxito",
+    "CONFIRM": "Confirmar"
+  },
+  "DASHBOARD": {
+    "TOTAL_TRANSACTIONS": "Total Transacciones",
+    "TOTAL_MONEY_MOVED": "Total Dinero movido",
+    "ACCOUNT_WITH_MOST_TRANSACTIONS": "Cuenta mas trans.",
+    "CRYPTO_PRICES": "Precios Crypto Monedas",
+    "TICKET": "Ticket",
+    "PRICE": "Precio"
+  },
+  "TRANSACTION": {
+    "ORIGIN_CLIENT": "Cliente origen",
+    "DESTINATION_CLIENT": "Cliente destino",
+    "AMOUNT_TO_TRANSFER": "Monto a transferir",
+    "TRANSFER": "Transferir",
+    "CONFIRM_TRANSFER_MESSAGE": "¿Estás seguro de que quieres transferir los productos seleccionados?",
+    "TRANSACTION_SUCCESSFUL": "Transacción exitosa",
+    "SELECT_ORIGIN_ACCOUNT": "Seleccione una cuenta de origen",
+    "SELECT_DESTINATION_ACCOUNT": "Seleccione una cuenta destino",
+    "ENTER_VALID_AMOUNT": "Ingrese un monto válido",
+    "INSUFFICIENT_BALANCE": "Saldo insuficiente",
+    "CANNOT_TRANSFER_TO_SAME_ACCOUNT": "No se puede transferir a la misma cuenta"
+  },
+  "HISTORY": {
+    "MANAGE_ORDERS": "Administrar Pedidos",
+    "DATE": "Fecha"
+  },
+  "FOOTER": {
+    "SAKAI_BY": "SAKAI por"
+  }
+}

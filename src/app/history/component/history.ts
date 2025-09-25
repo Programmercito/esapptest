@@ -11,6 +11,7 @@ import { SelectChangeEvent, SelectModule } from 'primeng/select';
 import { TransactionApi } from '@/transaction/service/transaction-api';
 import { FluidModule } from "primeng/fluid";
 import { InputNumberInputEvent, InputNumberModule } from "primeng/inputnumber";
+import { TranslateModule } from '@ngx-translate/core';
 
 interface TransactionView extends TransactionModel {
   origenName: string;
@@ -19,7 +20,7 @@ interface TransactionView extends TransactionModel {
 
 @Component({
   selector: 'app-history',
-  imports: [TableModule, CommonModule, InputTextModule, SelectModule, FormsModule, FluidModule, InputNumberModule],
+  imports: [TableModule, CommonModule, InputTextModule, SelectModule, FormsModule, FluidModule, InputNumberModule, TranslateModule],
   templateUrl: './history.html',
   styleUrl: './history.scss',
   standalone: true

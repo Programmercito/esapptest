@@ -5,8 +5,8 @@
             <div class="flex justify-between mb-4">
                 <div>
                     <span
-                        class="block text-muted-color font-medium mb-4">Total
-                        Transacciones</span>
+                        class="block text-muted-color font-medium mb-4">{{
+                        'DASHBOARD.TOTAL_TRANSACTIONS' | translate }}</span>
                     <div
                         class="text-surface-900 dark:text-surface-0 font-medium text-xl">{{this.totalTransactions}}</div>
                 </div>
@@ -23,8 +23,8 @@
             <div class="flex justify-between mb-4">
                 <div>
                     <span
-                        class="block text-muted-color font-medium mb-4">Total
-                        Dinero movido</span>
+                        class="block text-muted-color font-medium mb-4">{{
+                        'DASHBOARD.TOTAL_MONEY_MOVED' | translate }}</span>
                     <div
                         class="text-surface-900 dark:text-surface-0 font-medium text-xl">{{totalMonto
                         | currency:'':''}}</div>
@@ -42,11 +42,14 @@
             <div class="flex justify-between mb-4">
                 <div>
                     <span
-                        class="block text-muted-color font-medium mb-4">Cuenta
-                        mas trans.</span>
+                        class="block text-muted-color font-medium mb-4">{{
+                        'DASHBOARD.ACCOUNT_WITH_MOST_TRANSACTIONS' | translate
+                        }}</span>
+                    @if(this.cuentaConMasTransacciones){
                     <div
                         class="text-surface-900 dark:text-surface-0 font-medium text-xl">{{this.cuentaConMasTransacciones.name.first}}
                         {{this.cuentaConMasTransacciones.name.last}}</div>
+                    }
                 </div>
                 <div
                     class="flex items-center justify-center bg-cyan-100 dark:bg-cyan-400/10 rounded-border"
@@ -61,14 +64,16 @@
     <p-table #dt [value]="this.prices">
         <ng-template #caption>
             <div class="flex items-center justify-between">
-                <h5 class="m-0">Precios Crypto Monedas</h5>
+                <h5 class="m-0">{{ 'DASHBOARD.CRYPTO_PRICES' | translate }}</h5>
             </div>
 
         </ng-template>
         <ng-template pTemplate="header">
             <tr>
-                <th pSortableColumn="origenName">Ticket</th>
-                <th pSortableColumn="destinoName">Price</th>
+                <th pSortableColumn="origenName">{{ 'DASHBOARD.TICKET' |
+                    translate }}</th>
+                <th pSortableColumn="destinoName">{{ 'DASHBOARD.PRICE' |
+                    translate }}</th>
 
             </tr>
         </ng-template>

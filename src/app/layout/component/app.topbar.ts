@@ -5,11 +5,12 @@ import { CommonModule } from '@angular/common';
 import { StyleClassModule } from 'primeng/styleclass';
 import { AppConfigurator } from './app.configurator';
 import { LayoutService } from '../service/layout.service';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
     selector: 'app-topbar',
     standalone: true,
-    imports: [RouterModule, CommonModule, StyleClassModule, AppConfigurator],
+    imports: [RouterModule, CommonModule, StyleClassModule, AppConfigurator, TranslateModule],
     template: ` <div class="layout-topbar">
         <div class="layout-topbar-logo-container">
             <button class="layout-menu-button layout-topbar-action" (click)="layoutService.onMenuToggle()">
@@ -64,9 +65,9 @@ import { LayoutService } from '../service/layout.service';
 
             <div class="layout-topbar-menu hidden lg:block">
                 <div class="layout-topbar-menu-content">
-                    <button type="button" class="layout-topbar-action" (onclick)="changelanguage()">
+                    <button type="button" class="layout-topbar-action" (click)="changelanguage()">
                         <i class="pi pi-language"></i>
-                        <span>Profile</span>
+                        <span>{{ 'TOPBAR.PROFILE' | translate }}</span>
                     </button>
                 </div>
             </div>
@@ -74,12 +75,15 @@ import { LayoutService } from '../service/layout.service';
     </div>`
 })
 export class AppTopbar {
-    changelanguage() {
-        
-    }
     items!: MenuItem[];
 
-    constructor(public layoutService: LayoutService) { }
+    constructor(public layoutService: LayoutService, private translate: TranslateService) { }
+
+    changelanguage() {
+        const currentLang = this.translate.currentLang;
+        const newLang = currentLang === 'es' ? 'en' : 'es';
+        this.translate.use(newLang);
+    }
 
     toggleDarkMode() {
         this.layoutService.layoutConfig.update((state) => ({ ...state, darkTheme: !state.darkTheme }));
