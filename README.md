@@ -1,4 +1,4 @@
-# Sakai NG Project
+# Test project - Simulador de transacciones entre clientes
 
 Este es un proyecto de Angular que utiliza un `json-server` como backend simulado.
 
