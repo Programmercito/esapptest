@@ -1,0 +1,21 @@
+version: '3.8'
+services:
+  frontend:
+    build: .
+    command: ng serve --host 0.0.0.0
+    ports:
+      - "4200:4200"
+    volumes:
+      - .:/app
+      - /app/node_modules
+    depends_on:
+      - api
+    restart: always
+
+  api:
+    image: vvat/json-server
+    ports:
+      - "3000:80"
+    volumes:
+      - ./db.json:/data/db.json
+    restart: always

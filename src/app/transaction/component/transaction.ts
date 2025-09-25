@@ -19,7 +19,7 @@ import { BaseIcon } from "primeng/icons/baseicon";
 
 @Component({
   selector: 'app-transaction',
-  imports: [FluidModule, FormsModule, InputTextModule, ToastModule, SelectModule, ButtonModule, InputNumberModule, ConfirmDialogModule, CurrencyPipe, DatePipe, TranslateModule, Dialog, BaseIcon], // Corrected import
+  imports: [FluidModule, FormsModule, InputTextModule, ToastModule, SelectModule, ButtonModule, InputNumberModule, ConfirmDialogModule, CurrencyPipe, DatePipe, TranslateModule, Dialog], // Corrected import
   templateUrl: './transaction.html',
   standalone: true,
   providers: [MessageService, ConfirmationService],
