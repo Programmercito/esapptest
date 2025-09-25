@@ -6,7 +6,7 @@
                 <div>
                     <span
                         class="block text-muted-color font-medium mb-4">{{
-                        'DASHBOARD.TOTAL_TRANSACTIONS' | translate }}</span>
+                        'dashboard.total_transactions' | translate }}</span>
                     <div
                         class="text-surface-900 dark:text-surface-0 font-medium text-xl">{{this.totalTransactions}}</div>
                 </div>
@@ -24,7 +24,7 @@
                 <div>
                     <span
                         class="block text-muted-color font-medium mb-4">{{
-                        'DASHBOARD.TOTAL_MONEY_MOVED' | translate }}</span>
+                        'dashboard.total_money_moved' | translate }}</span>
                     <div
                         class="text-surface-900 dark:text-surface-0 font-medium text-xl">{{totalMonto
                         | currency:'':''}}</div>
@@ -43,7 +43,7 @@
                 <div>
                     <span
                         class="block text-muted-color font-medium mb-4">{{
-                        'DASHBOARD.ACCOUNT_WITH_MOST_TRANSACTIONS' | translate
+                        'dashboard.account_with_most_transactions' | translate
                         }}</span>
                     @if(this.cuentaConMasTransacciones){
                     <div
@@ -64,15 +64,15 @@
     <p-table #dt [value]="this.prices">
         <ng-template #caption>
             <div class="flex items-center justify-between">
-                <h5 class="m-0">{{ 'DASHBOARD.CRYPTO_PRICES' | translate }}</h5>
+                <h5 class="m-0">{{ 'dashboard.crypto_prices' | translate }}</h5>
             </div>
 
         </ng-template>
         <ng-template pTemplate="header">
             <tr>
-                <th pSortableColumn="origenName">{{ 'DASHBOARD.TICKET' |
+                <th pSortableColumn="origenName">{{ 'dashboard.ticket' |
                     translate }}</th>
-                <th pSortableColumn="destinoName">{{ 'DASHBOARD.PRICE' |
+                <th pSortableColumn="destinoName">{{ 'dashboard.price' |
                     translate }}</th>
 
             </tr>

@@ -1,52 +1,52 @@
 {
-  "TOPBAR": {
-    "PROFILE": "Profile"
+  "topbar": {
+    "profile": "Profile"
   },
-  "MENU": {
-    "HOME": "Home",
-    "DASHBOARD": "Dashboard",
-    "TRANSACTIONS": "Transactions",
-    "TRANSACTION": "Transaction",
-    "HISTORY": "History"
+  "menu": {
+    "home": "Home",
+    "dashboard": "Dashboard",
+    "transactions": "Transactions",
+    "transaction": "Transaction",
+    "history": "History"
   },
-  "COMMON": {
-    "ORIGIN": "Origin",
-    "DESTINATION": "Destination",
-    "AMOUNT": "Amount",
-    "NAME": "Name",
-    "BALANCE": "Balance",
-    "ACTION": "Action",
-    "SELECT_ACCOUNT": "Select an account",
-    "ERROR": "Error",
-    "SUCCESS": "Success",
-    "CONFIRM": "Confirm"
+  "common": {
+    "origin": "Origin",
+    "destination": "Destination",
+    "amount": "Amount",
+    "name": "Name",
+    "balance": "Balance",
+    "action": "Action",
+    "select_account": "Select an account",
+    "error": "Error",
+    "success": "Success",
+    "confirm": "Confirm"
   },
-  "DASHBOARD": {
-    "TOTAL_TRANSACTIONS": "Total Transactions",
-    "TOTAL_MONEY_MOVED": "Total Money Moved",
-    "ACCOUNT_WITH_MOST_TRANSACTIONS": "Account with most trans.",
-    "CRYPTO_PRICES": "Crypto Currency Prices",
-    "TICKET": "Ticket",
-    "PRICE": "Price"
+  "dashboard": {
+    "total_transactions": "Total Transactions",
+    "total_money_moved": "Total Money Moved",
+    "account_with_most_transactions": "Account with most trans.",
+    "crypto_prices": "Crypto Currency Prices",
+    "ticket": "Ticket",
+    "price": "Price"
   },
-  "TRANSACTION": {
-    "ORIGIN_CLIENT": "Origin Client",
-    "DESTINATION_CLIENT": "Destination Client",
-    "AMOUNT_TO_TRANSFER": "Amount to transfer",
-    "TRANSFER": "Transfer",
-    "CONFIRM_TRANSFER_MESSAGE": "Are you sure you want to transfer the selected products?",
-    "TRANSACTION_SUCCESSFUL": "Transaction successful",
-    "SELECT_ORIGIN_ACCOUNT": "Select an origin account",
-    "SELECT_DESTINATION_ACCOUNT": "Select a destination account",
-    "ENTER_VALID_AMOUNT": "Enter a valid amount",
-    "INSUFFICIENT_BALANCE": "Insufficient balance",
-    "CANNOT_TRANSFER_TO_SAME_ACCOUNT": "Cannot transfer to the same account"
+  "transaction": {
+    "origin_client": "Origin Client",
+    "destination_client": "Destination Client",
+    "amount_to_transfer": "Amount to transfer",
+    "transfer": "Transfer",
+    "confirm_transfer_message": "Are you sure you want to transfer the selected products?",
+    "transaction_successful": "Transaction successful",
+    "select_origin_account": "Select an origin account",
+    "select_destination_account": "Select a destination account",
+    "enter_valid_amount": "Enter a valid amount",
+    "insufficient_balance": "Insufficient balance",
+    "cannot_transfer_to_same_account": "Cannot transfer to the same account"
   },
-  "HISTORY": {
-    "MANAGE_ORDERS": "Manage Orders",
-    "DATE": "Date"
+  "history": {
+    "manage_orders": "Manage Orders",
+    "date": "Date"
   },
-  "FOOTER": {
-    "SAKAI_BY": "SAKAI by"
+  "footer": {
+    "sakai_by": "SAKAI by"
   }
 }

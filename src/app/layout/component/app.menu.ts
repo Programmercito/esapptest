@@ -31,14 +31,14 @@ export class AppMenu {
     updateMenu() {
         this.model = [
             {
-                label: this.translate.instant('MENU.HOME'),
-                items: [{ label: this.translate.instant('MENU.DASHBOARD'), icon: 'pi pi-fw pi-home', routerLink: ['/'] }]
+                label: this.translate.instant('menu.home'),
+                items: [{ label: this.translate.instant('menu.dashboard'), icon: 'pi pi-fw pi-home', routerLink: ['/'] }]
             },
             {
-                label: this.translate.instant('MENU.TRANSACTIONS'),
+                label: this.translate.instant('menu.transactions'),
                 items: [
-                    { label: this.translate.instant('MENU.TRANSACTION'), icon: 'pi pi-fw pi-dollar', routerLink: ['/transaction'] },
-                    { label: this.translate.instant('MENU.HISTORY'), icon: 'pi pi-fw pi-history', routerLink: ['/history'] }
+                    { label: this.translate.instant('menu.transaction'), icon: 'pi pi-fw pi-dollar', routerLink: ['/transaction'] },
+                    { label: this.translate.instant('menu.history'), icon: 'pi pi-fw pi-history', routerLink: ['/history'] }
                 ]
             }
         ];

@@ -43,7 +43,7 @@ export class Transaction {
         this.users = res;
       },
       error: (err) => {
-        this.messageservice.add({ severity: 'error', summary: this.translate.instant('COMMON.ERROR'), detail: 'Error fetching users' });
+        this.messageservice.add({ severity: 'error', summary: this.translate.instant('common.error'), detail: 'Error fetching users' });
       }
     });
   }
@@ -51,12 +51,12 @@ export class Transaction {
     let valid = this.validar(this.monto, this.origin, this.destination);
     if (valid) {
       this.confirmationService.confirm({
-        message: this.translate.instant('TRANSACTION.CONFIRM_TRANSFER_MESSAGE'),
-        header: this.translate.instant('COMMON.CONFIRM'),
+        message: this.translate.instant('transaction.confirm_transfer_message'),
+        header: this.translate.instant('common.confirm'),
         icon: 'pi pi-exclamation-triangle',
         accept: () => {
           this.transactionProcess();
-          this.messageservice.add({ severity: 'success', summary: this.translate.instant('COMMON.SUCCESS'), detail: this.translate.instant('TRANSACTION.TRANSACTION_SUCCESSFUL') });
+          this.messageservice.add({ severity: 'success', summary: this.translate.instant('common.success'), detail: this.translate.instant('transaction.transaction_successful') });
           this.ngOnInit();
         }
       });
@@ -82,23 +82,23 @@ export class Transaction {
   }
   validar(monto: number, origen: UserModel, destino: UserModel) {
     if (!origen.id) {
-      this.messageservice.add({ severity: 'error', summary: this.translate.instant('COMMON.ERROR'), detail: this.translate.instant('TRANSACTION.SELECT_ORIGIN_ACCOUNT') });
+      this.messageservice.add({ severity: 'error', summary: this.translate.instant('common.error'), detail: this.translate.instant('transaction.select_origin_account') });
       return false;
     }
     if (!destino.id) {
-      this.messageservice.add({ severity: 'error', summary: this.translate.instant('COMMON.ERROR'), detail: this.translate.instant('TRANSACTION.SELECT_DESTINATION_ACCOUNT') });
+      this.messageservice.add({ severity: 'error', summary: this.translate.instant('common.error'), detail: this.translate.instant('transaction.select_destination_account') });
       return false;
     }
     if (monto <= 0) {
-      this.messageservice.add({ severity: 'error', summary: this.translate.instant('COMMON.ERROR'), detail: this.translate.instant('TRANSACTION.ENTER_VALID_AMOUNT') });
+      this.messageservice.add({ severity: 'error', summary: this.translate.instant('common.error'), detail: this.translate.instant('transaction.enter_valid_amount') });
       return false;
     }
     if (origen.balance < monto) {
-      this.messageservice.add({ severity: 'error', summary: this.translate.instant('COMMON.ERROR'), detail: this.translate.instant('TRANSACTION.INSUFFICIENT_BALANCE') });
+      this.messageservice.add({ severity: 'error', summary: this.translate.instant('common.error'), detail: this.translate.instant('transaction.insufficient_balance') });
       return false;
     }
     if ((origen.id === destino.id)) {
-      this.messageservice.add({ severity: 'error', summary: this.translate.instant('COMMON.ERROR'), detail: this.translate.instant('TRANSACTION.CANNOT_TRANSFER_TO_SAME_ACCOUNT') });
+      this.messageservice.add({ severity: 'error', summary: this.translate.instant('common.error'), detail: this.translate.instant('transaction.cannot_transfer_to_same_account') });
       return false;
     }
     return true;

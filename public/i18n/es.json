@@ -1,52 +1,52 @@
 {
-  "TOPBAR": {
-    "PROFILE": "Perfil"
+  "topbar": {
+    "profile": "Perfil"
   },
-  "MENU": {
-    "HOME": "Inicio",
-    "DASHBOARD": "Dashboard",
-    "TRANSACTIONS": "Transacciones",
-    "TRANSACTION": "Transacción",
-    "HISTORY": "Historial"
+  "menu": {
+    "home": "Inicio",
+    "dashboard": "Dashboard",
+    "transactions": "Transacciones",
+    "transaction": "Transacción",
+    "history": "Historial"
   },
-  "COMMON": {
-    "ORIGIN": "Origen",
-    "DESTINATION": "Destino",
-    "AMOUNT": "Monto",
-    "NAME": "Nombre",
-    "BALANCE": "Saldo",
-    "ACTION": "Acción",
-    "SELECT_ACCOUNT": "Seleccione una cuenta",
-    "ERROR": "Error",
-    "SUCCESS": "Éxito",
-    "CONFIRM": "Confirmar"
+  "common": {
+    "origin": "Origen",
+    "destination": "Destino",
+    "amount": "Monto",
+    "name": "Nombre",
+    "balance": "Saldo",
+    "action": "Acción",
+    "select_account": "Seleccione una cuenta",
+    "error": "Error",
+    "success": "Éxito",
+    "confirm": "Confirmar"
   },
-  "DASHBOARD": {
-    "TOTAL_TRANSACTIONS": "Total Transacciones",
-    "TOTAL_MONEY_MOVED": "Total Dinero movido",
-    "ACCOUNT_WITH_MOST_TRANSACTIONS": "Cuenta mas trans.",
-    "CRYPTO_PRICES": "Precios Crypto Monedas",
-    "TICKET": "Ticket",
-    "PRICE": "Precio"
+  "dashboard": {
+    "total_transactions": "Total Transacciones",
+    "total_money_moved": "Total Dinero movido",
+    "account_with_most_transactions": "Cuenta mas trans.",
+    "crypto_prices": "Precios Crypto Monedas",
+    "ticket": "Ticket",
+    "price": "Precio"
   },
-  "TRANSACTION": {
-    "ORIGIN_CLIENT": "Cliente origen",
-    "DESTINATION_CLIENT": "Cliente destino",
-    "AMOUNT_TO_TRANSFER": "Monto a transferir",
-    "TRANSFER": "Transferir",
-    "CONFIRM_TRANSFER_MESSAGE": "¿Estás seguro de que quieres transferir los productos seleccionados?",
-    "TRANSACTION_SUCCESSFUL": "Transacción exitosa",
-    "SELECT_ORIGIN_ACCOUNT": "Seleccione una cuenta de origen",
-    "SELECT_DESTINATION_ACCOUNT": "Seleccione una cuenta destino",
-    "ENTER_VALID_AMOUNT": "Ingrese un monto válido",
-    "INSUFFICIENT_BALANCE": "Saldo insuficiente",
-    "CANNOT_TRANSFER_TO_SAME_ACCOUNT": "No se puede transferir a la misma cuenta"
+  "transaction": {
+    "origin_client": "Cliente origen",
+    "destination_client": "Cliente destino",
+    "amount_to_transfer": "Monto a transferir",
+    "transfer": "Transferir",
+    "confirm_transfer_message": "¿Estás seguro de que quieres transferir los productos seleccionados?",
+    "transaction_successful": "Transacción exitosa",
+    "select_origin_account": "Seleccione una cuenta de origen",
+    "select_destination_account": "Seleccione una cuenta destino",
+    "enter_valid_amount": "Ingrese un monto válido",
+    "insufficient_balance": "Saldo insuficiente",
+    "cannot_transfer_to_same_account": "No se puede transferir a la misma cuenta"
   },
-  "HISTORY": {
-    "MANAGE_ORDERS": "Administrar Pedidos",
-    "DATE": "Fecha"
+  "history": {
+    "manage_orders": "Administrar Pedidos",
+    "date": "Fecha"
   },
-  "FOOTER": {
-    "SAKAI_BY": "SAKAI por"
+  "footer": {
+    "sakai_by": "SAKAI por"
   }
 }

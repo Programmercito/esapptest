@@ -5,13 +5,13 @@
     <div class="flex flex-col md:flex-row gap-8">
         <div class="md:w-1/2">
             <div class="card flex flex-col gap-4">
-                <div class="font-semibold text-xl">{{ 'COMMON.ORIGIN' | translate }}</div>
+                <div class="font-semibold text-xl">{{ 'common.origin' | translate }}</div>
                 <div class="flex flex-col gap-2">
-                    <label for="name1">{{ 'TRANSACTION.ORIGIN_CLIENT' | translate }}</label>
+                    <label for="name1">{{ 'transaction.origin_client' | translate }}</label>
                     <p-select [options]="this.users"
                         [(ngModel)]="origin" optionLabel="name"
                         [filter]="true" filterBy="name.first" [showClear]="true"
-                        [placeholder]="'COMMON.SELECT_ACCOUNT' | translate" class="w-full md:w-56">
+                        [placeholder]="'common.select_account' | translate" class="w-full md:w-56">
                         <ng-template #selectedItem let-selectedOption>
                             <div class="flex items-center gap-2">
                                 <img
@@ -33,18 +33,18 @@
                     </p-select>
                 </div>
                 <div class="flex flex-col gap-2">
-                    <label for="monto">{{ 'TRANSACTION.AMOUNT_TO_TRANSFER' | translate }}</label>
+                    <label for="monto">{{ 'transaction.amount_to_transfer' | translate }}</label>
                     <p-inputnumber [(ngModel)]="monto" inputId="minmaxfraction"
                         mode="decimal" [minFractionDigits]="2"
                         [maxFractionDigits]="2" />
 
                 </div>
                 @if (origin.name!=null){
-                <div class="font-semibold text-xl">{{ 'TRANSACTION.ORIGIN_CLIENT' | translate }}</div>
+                <div class="font-semibold text-xl">{{ 'transaction.origin_client' | translate }}</div>
                 <div class="flex flex-col gap-2">
-                    <label for="name">{{ 'COMMON.NAME' | translate }}</label>
+                    <label for="name">{{ 'common.name' | translate }}</label>
                     {{origin.name.first}} {{origin.name.last}}
-                    <label for="balance">{{ 'COMMON.BALANCE' | translate }}</label>
+                    <label for="balance">{{ 'common.balance' | translate }}</label>
                     {{origin.balance | currency:'':''}}
                     <img [src]="origin.picture.large" style="width: 180px"
                         class="rounded-xl" />
@@ -55,13 +55,13 @@
         </div>
         <div class="md:w-1/2">
             <div class="card flex flex-col gap-4">
-                <div class="font-semibold text-xl">{{ 'COMMON.DESTINATION' | translate }}</div>
+                <div class="font-semibold text-xl">{{ 'common.destination' | translate }}</div>
                 <div class="flex flex-col gap-2">
-                    <label for="name1">{{ 'TRANSACTION.DESTINATION_CLIENT' | translate }}</label>
+                    <label for="name1">{{ 'transaction.destination_client' | translate }}</label>
                     <p-select [options]="this.users"
                         [(ngModel)]="destination" optionLabel="name"
                         [filter]="true" filterBy="name.first" [showClear]="true"
-                        [placeholder]="'COMMON.SELECT_ACCOUNT' | translate" class="w-full md:w-56">
+                        [placeholder]="'common.select_account' | translate" class="w-full md:w-56">
                         <ng-template #selectedItem let-selectedOption>
                             <div class="flex items-center gap-2">
                                 <img
@@ -83,15 +83,15 @@
                     </p-select>
                 </div>
                 <div class="flex flex-col gap-2">
-                    <label for="button">{{ 'COMMON.ACTION' | translate }}</label>
-                    <p-button (onClick)="transferir()" [label]="'TRANSACTION.TRANSFER' | translate"></p-button>
+                    <label for="button">{{ 'common.action' | translate }}</label>
+                    <p-button (onClick)="transferir()" [label]="'transaction.transfer' | translate"></p-button>
                 </div>
                 @if (destination.name!=null){
-                <div class="font-semibold text-xl">{{ 'TRANSACTION.DESTINATION_CLIENT' | translate }}</div>
+                <div class="font-semibold text-xl">{{ 'transaction.destination_client' | translate }}</div>
                 <div class="flex flex-col gap-2">
-                    <label for="img">{{ 'COMMON.NAME' | translate }}</label>
+                    <label for="img">{{ 'common.name' | translate }}</label>
                     {{destination.name.first}} {{destination.name.last}}
-                    <label for="balance">{{ 'COMMON.BALANCE' | translate }}</label>
+                    <label for="balance">{{ 'common.balance' | translate }}</label>
                     {{destination.balance | currency:'':''}}
                     <img [src]="destination.picture.large" style="width: 180px"
                         class="rounded-xl" />

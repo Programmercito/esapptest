@@ -67,7 +67,7 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
                 <div class="layout-topbar-menu-content">
                     <button type="button" class="layout-topbar-action" (click)="changelanguage()">
                         <i class="pi pi-language"></i>
-                        <span>{{ 'TOPBAR.PROFILE' | translate }}</span>
+                        <span>{{ 'topbar.profile' | translate }}</span>
                     </button>
                 </div>
             </div>

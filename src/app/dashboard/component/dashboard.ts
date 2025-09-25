@@ -64,12 +64,12 @@ export class Dashboard implements OnInit, OnDestroy {
             this.calculateData(this.lista);
           },
           error: (error) => {
-            this.messageservice.add({ severity: 'error', summary: this.translate.instant('COMMON.ERROR'), detail: error.message });
+            this.messageservice.add({ severity: 'error', summary: this.translate.instant('common.error'), detail: error.message });
           }
         });
       },
       error: (error) => {
-        this.messageservice.add({ severity: 'error', summary: this.translate.instant('COMMON.ERROR'), detail: error.message });
+        this.messageservice.add({ severity: 'error', summary: this.translate.instant('common.error'), detail: error.message });
       }
     });
   }

@@ -6,7 +6,7 @@ import { TranslateModule } from '@ngx-translate/core';
     selector: 'app-footer',
     imports: [TranslateModule],
     template: `<div class="layout-footer">
-        {{ 'FOOTER.SAKAI_BY' | translate }}
+        {{ 'footer.sakai_by' | translate }}
         <a href="https://primeng.org" target="_blank" rel="noopener noreferrer" class="text-primary font-bold hover:underline">PrimeNG</a>
     </div>`
 })
