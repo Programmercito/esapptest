@@ -27,7 +27,8 @@
     "account_with_most_transactions": "Account with most trans.",
     "crypto_prices": "Crypto Currency Prices",
     "ticket": "Ticket",
-    "price": "Price"
+    "price": "Price",
+    "transfer_today": "Transfers Today"
   },
   "transaction": {
     "origin_client": "Origin Client",

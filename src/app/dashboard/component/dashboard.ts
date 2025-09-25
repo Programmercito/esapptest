@@ -25,7 +25,7 @@ export class Dashboard implements OnInit, OnDestroy {
   totalTransactions: number = 0;
   totalMonto: number = 0;
   cuentaConMasTransacciones!: UserModel;
-
+  todayammount: number = 0;
   prices: any[] = [];
   private sub!: Subscription;
 
@@ -77,6 +77,17 @@ export class Dashboard implements OnInit, OnDestroy {
   calculateData(lista: TransactionModel[]) {
     this.totalTransactions = lista.length;
     this.totalMonto = lista.reduce((total, transaction) => total + transaction.monto, 0);
+    // de la lista sumo todo lo de hoy
+    const today = new Date();
+    // filtro de lista todo lo de hoy
+    const todayTransactions = lista.filter(transaction => {
+      const transactionDate = new Date(transaction.date);
+      return transactionDate.getDate() === today.getDate() &&
+        transactionDate.getMonth() === today.getMonth() &&
+        transactionDate.getFullYear() === today.getFullYear();
+    });
+    // sumo todo lo de hoy 
+    this.todayammount = todayTransactions.map(transaction => transaction.monto).reduce((total, monto) => total + monto, 0);
 
     if (lista.length === 0) {
       return;

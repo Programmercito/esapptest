@@ -27,7 +27,8 @@
     "account_with_most_transactions": "Cuenta mas trans.",
     "crypto_prices": "Precios Crypto Monedas",
     "ticket": "Ticket",
-    "price": "Precio"
+    "price": "Precio",
+    "transfer_today": "Total Hoy"
   },
   "transaction": {
     "origin_client": "Cliente origen",
