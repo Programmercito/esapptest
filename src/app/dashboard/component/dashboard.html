@@ -57,21 +57,26 @@
         </div>
     </div>
 </div>
-<p-table #dt [value]="this.prices" class="mt-10">
-    <ng-template pTemplate="caption">
-        Precios Crypto Monedas
-    </ng-template>
-    <ng-template pTemplate="header">
-        <tr>
-            <th pSortableColumn="origenName">Ticket</th>
-            <th pSortableColumn="destinoName">Price</th>
+<div class="card mt-8">
+    <p-table #dt [value]="this.prices">
+        <ng-template #caption>
+            <div class="flex items-center justify-between">
+                <h5 class="m-0">Precios Crypto Monedas</h5>
+            </div>
 
-        </tr>
-    </ng-template>
-    <ng-template pTemplate="body" let-price>
-        <tr>
-            <td>{{ price.s }}</td>
-            <td>{{ price.c }}</td>
-        </tr>
-    </ng-template>
-</p-table>
+        </ng-template>
+        <ng-template pTemplate="header">
+            <tr>
+                <th pSortableColumn="origenName">Ticket</th>
+                <th pSortableColumn="destinoName">Price</th>
+
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-price>
+            <tr>
+                <td>{{ price.s }}</td>
+                <td>{{ price.c }}</td>
+            </tr>
+        </ng-template>
+    </p-table>
+</div>

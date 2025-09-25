@@ -8,11 +8,11 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { MessageService } from 'primeng/api';
 import { Subscription } from 'rxjs';
 import { TableModule } from "primeng/table";
-import { BaseIcon } from "primeng/icons/baseicon";
+
 
 @Component({
   selector: 'app-dashboard',
-  imports: [CurrencyPipe, TableModule, BaseIcon],
+  imports: [CurrencyPipe, TableModule],
   templateUrl: './dashboard.html',
   styleUrl: './dashboard.scss',
   standalone: true,
