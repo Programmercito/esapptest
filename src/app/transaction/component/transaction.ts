@@ -26,14 +26,7 @@ import { BaseIcon } from "primeng/icons/baseicon";
   styleUrl: './transaction.scss'
 })
 export class Transaction {
-  cerrar() {
-    this.infotransaction = false;
-    this.origin = {} as UserModel;
-    this.destination = {} as UserModel;
-    this.monto = 0;
-    this.originSelect.clear();
-    this.destinationSelect.clear();
-  }
+
   users: UserModel[] = [];
   origin: UserModel;
   destination: UserModel;
@@ -133,5 +126,12 @@ export class Transaction {
     }
     return true;
   }
-
+  cerrar() {
+    this.infotransaction = false;
+    this.origin = {} as UserModel;
+    this.destination = {} as UserModel;
+    this.monto = 0;
+    this.originSelect.clear();
+    this.destinationSelect.clear();
+  }
 }
