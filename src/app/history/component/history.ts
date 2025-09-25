@@ -103,6 +103,8 @@ export class History implements OnInit {
         destinoName: this.getUserName(t.destino)
       }));
       this.transactions = [...this.originalTransactions];
+      this.total = this.transactions.reduce((total, transaction) => total + transaction.monto, 0);
+
     });
   }
 
